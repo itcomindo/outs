@@ -5,89 +5,251 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 add_action('carbon_fields_register_fields', 'mn_theme_options');
-function mn_theme_options() {
+function mn_theme_options()
+{
     $theme_options = Container::make('theme_options', __('Theme Options', 'mn'))
         ->add_fields([
             Field::make('text', 'mn_blog_title', __('Blog Title', 'mn')),
             Field::make('text', 'mn_blog_description', __('Blog Description', 'mn')),
         ]);
 
-        // sub option start
-        // DATA WEBSITE
-        Container::make('theme_options', 'Data Admin Website')
+    // sub option start
+    // DATA WEBSITE
+    Container::make('theme_options', 'Data Admin Website')
         ->set_page_parent($theme_options)
         ->add_fields([
+            // logo
+            Field::make('image', 'company_logo_mn', 'Logo')
+                ->set_value_type('url'),
+            // nama perusahaan
+            Field::make('text', 'company_name_mn', 'Company Name'),
+            // alamat
+            Field::make('textarea', 'company_address_mn', 'Address'),
+            // kota
+            Field::make('text', 'company_city_mn', 'City'),
+            // provinsi
+            Field::make('text', 'company_province_mn', 'Province'),
+            // kode pos
+            Field::make('text', 'company_postal_code_mn', 'Postal Code'),
+            // negara
+            Field::make('text', 'company_country_mn', 'Country'),
             // multiple phone number
             Field::make('text', 'multiple_phone_number_mn', 'Multiple Phone Number')
-            ->set_help_text('masukan nomor telepon dengan pemisah koma (,) untuk menampilkan tombol telepon di halaman depan: contoh: 0812-3456-777, 0812-3456-888, 0812-3456-999'),
+                ->set_help_text('masukan nomor telepon dengan pemisah koma (,) untuk menampilkan tombol telepon di halaman depan: contoh: 0812-3456-777, 0812-3456-888, 0812-3456-999'),
             // primary phone number
             Field::make('text', 'primary_phone_number_mn', 'Primary Phone Number')
-            ->set_help_text('<span class="red bold">NOTE: masukan hanya 1 nomor saja</span> Untuk tombol telepon disejumlah halaman dimana hanya butuh satu nomor telepon'),
+                ->set_help_text('<span class="red bold">NOTE: masukan hanya 1 nomor saja</span> Untuk tombol telepon disejumlah halaman dimana hanya butuh satu nomor telepon'),
             // whatsapp number
             Field::make('text', 'whatsapp_number_mn', 'Primary Whatsapp Number')
-            ->set_help_text('<span class="red bold">NOTE: masukan hanya 1 nomor saja</span> Untuk tombol whatsapp disejumlah halaman dimana hanya butuh satu nomor whatsapp'),
+                ->set_help_text('<span class="red bold">NOTE: masukan hanya 1 nomor saja</span> Untuk tombol whatsapp disejumlah halaman dimana hanya butuh satu nomor whatsapp'),
             // email
             Field::make('text', 'email_mn', 'Email')
-            ->set_help_text('<span class="red bold">NOTE: masukan hanya 1 email saja</span>'),
+                ->set_help_text('<span class="red bold">NOTE: masukan hanya 1 email saja</span>'),
             // social media
             // facebook
             Field::make('text', 'website_facebook_mn', 'Facebook')
-            ->set_help_text('masukan url facebook dengan format: https://www.facebook.com/username'),
+                ->set_help_text('masukan url facebook dengan format: https://www.facebook.com/username'),
             // twitter
             Field::make('text', 'website_twitter_mn', 'Twitter')
-            ->set_help_text('masukan url twitter dengan format: https://www.twitter.com/username'),
+                ->set_help_text('masukan url twitter dengan format: https://www.twitter.com/username'),
             // instagram
             Field::make('text', 'website_instagram_mn', 'Instagram')
-            ->set_help_text('masukan url instagram dengan format: https://www.instagram.com/username'),
+                ->set_help_text('masukan url instagram dengan format: https://www.instagram.com/username'),
             // youtube
             Field::make('text', 'website_youtube_mn', 'Youtube')
-            ->set_help_text('masukan url youtube dengan format: https://www.youtube.com/username'),
+                ->set_help_text('masukan url youtube dengan format: https://www.youtube.com/username'),
             // linkedin
             Field::make('text', 'website_linkedin_mn', 'Linkedin')
-            ->set_help_text('masukan url linkedin dengan format: https://www.linkedin.com/username'),
+                ->set_help_text('masukan url linkedin dengan format: https://www.linkedin.com/username'),
+            // tiktok
+            Field::make('text', 'website_tiktok_mn', 'Tiktok')
+                ->set_help_text('masukan url tiktok dengan format: https://www.tiktok.com/username'),
             // customer services
             Field::make('complex', 'customer_services_mn', 'Customer Services')
-            ->set_help_text('<b>salahsatu dari 3 kolom (<span style="color: red;">telepon</span>, <span style="color: green;">whatsapp</span> atau <span style="color: blue;">email</span>) <span style="text-transform: uppercase; color: red;">WAJIB</span> diisi</b> untuk menampilkan customer service online')
-            ->set_layout('tabbed-horizontal')
-            ->add_fields([
-                Field::make('checkbox','customer_service_status_mn','Status')
-                ->set_help_text('Check to active this customer service'),
-                Field::make('image', 'customer_service_photo_mn', 'Photo')
-                ->set_value_type('url')
-                ->set_help_text('Kosongkan jika tidak ingin ditampilkan secara otomatis akan menampilkan icon user'),
-                Field::make('text', 'customer_services_name_mn', 'Name')
-                ->set_help_text('Kosongkan jika tidak ingin ditampilkan, jika kosong akan menampilkan nama CS 1, CS 2, dst'),
-                Field::make('text', 'customer_services_phone_mn', 'Phone')
-                ->set_help_text('Kosongkan jika tidak ingin ditampilkan'),
-                Field::make('text', 'customer_services_whatsapp_mn', 'Whatsapp')
-                ->set_help_text('Kosongkan jika tidak ingin ditampilkan'),
-                Field::make('text', 'customer_services_email_mn', 'Email')
-                ->set_help_text('Kosongkan jika tidak ingin ditampilkan'),
-            ])
+                ->set_help_text('<b>salahsatu dari 3 kolom (<span style="color: red;">telepon</span>, <span style="color: green;">whatsapp</span> atau <span style="color: blue;">email</span>) <span style="text-transform: uppercase; color: red;">WAJIB</span> diisi</b> untuk menampilkan customer service online')
+                ->set_layout('tabbed-horizontal')
+                ->add_fields([
+                    Field::make('checkbox', 'customer_service_status_mn', 'Status')
+                        ->set_help_text('Check to active this customer service'),
+                    Field::make('image', 'customer_service_photo_mn', 'Photo')
+                        ->set_value_type('url')
+                        ->set_help_text('Kosongkan jika tidak ingin ditampilkan secara otomatis akan menampilkan icon user'),
+                    Field::make('text', 'customer_services_name_mn', 'Name')
+                        ->set_help_text('Kosongkan jika tidak ingin ditampilkan, jika kosong akan menampilkan nama CS 1, CS 2, dst'),
+                    Field::make('text', 'customer_services_phone_mn', 'Phone')
+                        ->set_help_text('Kosongkan jika tidak ingin ditampilkan'),
+                    Field::make('text', 'customer_services_whatsapp_mn', 'Whatsapp')
+                        ->set_help_text('Kosongkan jika tidak ingin ditampilkan'),
+                    Field::make('text', 'customer_services_email_mn', 'Email')
+                        ->set_help_text('Kosongkan jika tidak ingin ditampilkan'),
+                ])
         ]);
 
-        // API SETTING
-        Container::make('theme_options', 'API Setting')
-            ->set_page_parent($theme_options)
-            ->add_fields([
-                // google site verification
-                Field::make('text', 'goolge_site_verification_mn', 'Google Site Verification'),
-                // google map api
-                Field::make('text', 'google_map_api_mn', 'Google Map API'),
-                // facebook app id
-                Field::make('text', 'facebook_app_id_mn', 'Facebook App ID'),
-                // bing site verification
-                Field::make('text', 'bing_site_verification_mn', 'Bing Site Verification'),
-                // yandex site verification
-                Field::make('text', 'yandex_site_verification_mn', 'Yandex Site Verification'),
-                // recaptcha site key
-                Field::make('text', 'recaptcha_site_key_mn', 'Recaptcha Site Key'),
-                // recaptcha secret key
-                Field::make('text', 'recaptcha_secret_key_mn', 'Recaptcha Secret Key')
+    // API SETTING
+    Container::make('theme_options', 'API & Tracking Setting')
+        ->set_page_parent($theme_options)
+        ->add_fields([
+            // google site verification
+            Field::make('text', 'goolge_site_verification_mn', 'Google Site Verification')
+            ->set_classes( 'googleSiteVer' ),
+            // google map api
+            Field::make('text', 'google_map_api_mn', 'Google Map API'),
+            // facebook app id
+            Field::make('text', 'facebook_app_id_mn', 'Facebook App ID'),
+            // bing site verification
+            Field::make('text', 'bing_site_verification_mn', 'Bing Site Verification')
+                ->set_help_text('masukan kode bing site verification')
+                ->set_classes( 'bingSiteVer' ),
+            // yandex site verification
+            Field::make('text', 'yandex_site_verification_mn', 'Yandex Site Verification'),
+            // recaptcha site key
+            Field::make('text', 'recaptcha_site_key_mn', 'Recaptcha Site Key'),
+            // recaptcha secret key
+            Field::make('text', 'recaptcha_secret_key_mn', 'Recaptcha Secret Key'),
+            // option google analytics or google tag manager
+            Field::make('select', 'google_tracking_anaytic_option_mn', 'Pilih salah satu')
+                ->set_help_text('pilih salah satu untuk menampilkan google analytics atau google tag manager')
+                ->add_options([
+                    'pilih' => 'Pilih salah satu',
+                    'google_analytics' => 'Google Analytics',
+                    'google_tag_manager' => 'Google Tag Manager',
+                ]),
+            // if google analytics
+            Field::make('textarea', 'google_analytics_mn', 'Google Analytics')
+                ->set_help_text('masukan script google analytics')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'google_tracking_anaytic_option_mn',
+                        'value' => 'google_analytics',
+                    ]
+                ]),
+            // if google tag manager
+            // field google tag manager head
+            Field::make('textarea', 'google_tag_manager_head_mn', 'Google Tag Manager Head')
+                ->set_help_text('masukan script google tag manager head')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'google_tracking_anaytic_option_mn',
+                        'value' => 'google_tag_manager',
+                    ]
+                ]),
+            // field google tag manager body
+            Field::make('textarea', 'google_tag_manager_body_mn', 'Google Tag Manager Body')
+                ->set_help_text('masukan script google tag manager body')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'google_tracking_anaytic_option_mn',
+                        'value' => 'google_tag_manager',
+                    ]
+                ]),
 
-            ]);
+        ]);
 
-        // sub option end
+    // SINGLE POST OPTIONS
+    Container::make('theme_options', 'Single Post Options')
+        ->set_page_parent($theme_options)
+        ->add_fields([
+            // enable disable fallback featured image
+            Field::make('checkbox', 'enable_disable_fallback_featured_image_mn', 'Enable/Disable Fallback Featured Image')
+                ->set_help_text('pilih untuk mengaktifkan, fungsi: Jika tidak ada featured image maka akan menampilkan gambar ini'),
+            // fallback featured image
+            Field::make('image', 'fallback_featured_image_mn', 'Fallback Featured Image')
+                ->set_value_type('url')
+                ->set_help_text('Jika tidak ada featured image maka akan menampilkan gambar ini')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'enable_disable_fallback_featured_image_mn',
+                        'value' => true,
+                    ]
+                ]),
+            // enable disabel comment form
+            Field::make('checkbox', 'enable_disable_comment_form_mn', 'Enable/Disable Comment Form')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk mengaktifkan comment form'),
+            // enable disable author box
+            Field::make('checkbox', 'enable_disable_author_box_mn', 'Enable/Disable Author Box')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk menampilkan author box'),
+
+        ]);
+
+    // HOMEPAGE OPTIONS
+    Container::make('theme_options', 'Homepage Options')
+        ->set_page_parent($theme_options)
+        ->add_fields([]);
+    // PAGE OPTIONS
+    Container::make('theme_options', 'Page Options')
+        ->set_page_parent($theme_options)
+        ->add_fields([]);
+
+    // TAG OPTIONS
+    Container::make('theme_options', 'Tag Page Options')
+        ->set_page_parent($theme_options)
+        ->add_fields([]);
+
+    // AUTHOR OPTIONS
+    Container::make('theme_options', 'Author Options')
+        ->set_page_parent($theme_options)
+        ->add_fields([]);
+
+    // ADS OPTIONS
+    Container::make('theme_options', 'Ads Options')
+        ->set_page_parent($theme_options)
+        ->add_fields([
+            // google adsense code verification
+            Field::make('text', 'google_adsense_code_verification_mn', 'Google Adsense Code Verification')
+                ->set_help_text('masukan kode verifikasi google adsense'),
+            // ads header
+            Field::make('textarea', 'ads_header_mn', 'Ads Header')
+                ->set_help_text('masukan kode adsense untuk menampilkan di header'),
+            // ads footer
+            Field::make('textarea', 'ads_footer_mn', 'Ads Footer')
+                ->set_help_text('masukan kode adsense untuk menampilkan di footer'),
+        ]);
+    // FOOTER OPTIONS
+    Container::make('theme_options', 'Footer Options')
+        ->set_page_parent($theme_options)
+        ->add_fields([]);
+
+    // PLUGINS OPTIONS
+    Container::make('theme_options', 'Plugin Options')
+        ->set_page_parent($theme_options)
+        ->add_fields([
+            // enabling breadcrumbs
+            Field::make('checkbox', 'enabling_breadcrumbs_mn', 'Enabling Breadcrumbs')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk mengaktifkan breadcrumbs'),
+            // enbling builtin seo options
+            Field::make('checkbox', 'enabling_builtin_seo_options_mn', 'Enabling Builtin SEO Options')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk mengaktifkan builtin seo options sehingga Anda tidak perlu menggunakan plugin seo lagi'),
+            // disable gutenburg
+            Field::make('checkbox', 'disable_gutenburg_mn', 'Disable Gutenburg')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk menonaktifkan gutenburg'),
+                // enabling limit login attempts
+            Field::make('checkbox', 'enabling_limit_login_attempts_mn', 'Enabling Limit Login Attempts')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk mengaktifkan limit login attempts'),
+                // enabling ferboden login
+            Field::make('checkbox', 'enabling_ferboden_login_mn', 'Enabling Ferboden Login')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk mengaktifkan ferboden login, Fungsi: jika seorang user mencoba login dengan username yang tertera didalam list maka akan secara otomatis akan di blokir dan tidak bisa mengunjungi website ini'),
+                // list ferboden login
+            Field::make('textarea', 'list_ferboden_login_mn', 'List Ferboden Login')
+                ->set_help_text('masukan list username yang tidak boleh login dipisahkan dengan koma (,), contoh: admin,administrator,root,superadmin,superuser,Admin,Administrator,Root,Superadmin,Superuser')
+                ->set_default_value('admin,administrator,root,superadmin,superuser,Admin,Administrator,Root,Superadmin,Superuser')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'enabling_ferboden_login_mn',
+                        'value' => true,
+                    ]
+                ]),
+                // enabling ferboden register
+
+        ]);
+
+    // sub option end
 
 
 

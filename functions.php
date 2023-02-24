@@ -78,8 +78,7 @@ include get_template_directory() . '/menus/menus.php';
 // include options
 include get_template_directory() . '/options/options.php';
 
-// include plugins
-include get_template_directory() . '/plugins/plugins.php';
+
 
 // include queries
 include get_template_directory() . '/queries/queries.php';
@@ -98,3 +97,6 @@ include get_template_directory() . '/shortcodes/shortcodes.php';
 
 // include security
 include get_template_directory() . '/security/security.php';
+
+// include plugins
+include get_template_directory() . '/plugins/plugins.php';

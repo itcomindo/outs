@@ -25,6 +25,14 @@ function load_mm_js()
 }
 add_action('wp_enqueue_scripts', 'load_mm_js', 3);
 
-
+// admin js
+function load_admin_js() {
+    // if current page is /admin.php?page=crb_carbon_fields_container_api_tracking_setting.php
+    if (isset($_GET['page']) && $_GET['page'] == 'crb_carbon_fields_container_api_tracking_setting.php') {
+        // load admin js
+        wp_enqueue_script('admin-js', get_template_directory_uri() . '/js/admin-options.js', array('jquery'), $version, true);
+    }
+}
+add_action('admin_enqueue_scripts', 'load_admin_js');
 
 
