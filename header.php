@@ -23,4 +23,14 @@ defined('ABSPATH') || exit;
 </head>
 
 <body <?php body_class(); ?>>
-    <?php wp_body_open(); ?>
+    <?php
+
+    mn_topbar();
+    mn_header();
+    mn_header_menu();
+    
+    
+    wp_body_open();
+    
+    
+    ?>

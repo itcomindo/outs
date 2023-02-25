@@ -1,0 +1,29 @@
+#topbar {
+    background-color: black;
+    color: white;
+    height: 40px;
+    padding: 0;
+}
+#topbar .container {
+    height: 100%;
+}
+.topbarWr {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.topbarCol {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.topbarLeft,
+.topbarRight {
+    width: 15%;
+}
+.topbarMid {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}

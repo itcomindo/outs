@@ -61,6 +61,12 @@ function load_mm_css()
         // wait
     }
 
+    // temporary CSS
+    wp_enqueue_style('topbar-css', get_template_directory_uri() . '/css/topbar.css', array(), $version, 'all');
+    wp_enqueue_style('header-css', get_template_directory_uri() . '/css/header.css', array(), $version, 'all');
+    wp_enqueue_style('header-menu-css', get_template_directory_uri() . '/css/header-menu.css', array(), $version, 'all');
+
+
     // load global media css
     wp_enqueue_style('global-media-css', get_template_directory_uri() . '/css/global-media.css', array(), $version, 'all');
     wp_enqueue_style('darkmode', get_template_directory_uri() . '/css/darkmode.css', array(), 'v1.0', 'all');

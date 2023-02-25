@@ -1,0 +1,25 @@
+header {
+    height: 80px;
+}
+header .container {
+    height: 100%;
+}
+.headerWr {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.headerCol {
+    height: 100%;
+}
+.headerLeft {
+    width: 150px;
+    display: flex;
+    align-items: center;
+}
+.headerRight {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+}

@@ -76,9 +76,9 @@ html {
   --border-radius-xl: 10px;
 }
 body {
+  background-color: #eee;
   font-size: 16px;
   font-family: var(--font-primary);
-  font-weight: normal;
   color: var(--colpal-primary);
   line-height: 1.5;
   display: flex;
@@ -102,20 +102,21 @@ a {
   color: inherit;
 }
 section,
-div {
+div,
+span,
+ul,
+li {
   box-sizing: border-box;
   position: relative;
 }
 
-div {
-  padding-top: var(--padding-em-1);
-  padding-bottom: var(--padding-em-1);
-}
 
 /* ELements */
 .section {
   width: 100vw;
   max-width: 100%;
+}
+.globalSection {
   padding-top: 3em;
   padding-bottom: 3em;
 }
@@ -125,9 +126,7 @@ div {
   padding: 0 8px;
   margin: 0 auto;
 }
-.container div {
-  margin-bottom: 16px;
-}
+
 /* create h1 - h6, font-size is using clamp seperatedly */
 p {
   font-size: clamp(90%, 5vw, 1rem);
