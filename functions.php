@@ -100,3 +100,4 @@ include get_template_directory() . '/security/security.php';
 
 // include plugins
 include get_template_directory() . '/plugins/plugins.php';
+

@@ -22,3 +22,7 @@ include get_template_directory() . '/options/fallback-image.php';
 include get_template_directory() . '/options/comment-form-options.php';
 // author box
 include get_template_directory() . '/options/author-box-options.php';
+// auto alt title image in post
+include get_template_directory() . '/options/auto-alt-title-img-on-post.php';
+// remove website field from comment form
+include get_template_directory() . '/options/remove-website-field-in-comment-form.php';

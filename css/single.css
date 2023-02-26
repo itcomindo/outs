@@ -1,0 +1,31 @@
+.theContent {
+    overflow: hidden;
+}
+.theContent h2 {
+    font-size: clamp(1.1rem, 3vw, 1.7rem);
+}
+
+.theContent h3 {
+    font-size: clamp(1rem, 3vw, 1.4rem);
+}
+
+.theContent h4 {
+    font-size: clamp(.9rem, 3vw, 1.1rem);
+}
+
+.theContent h5 {
+    font-size: clamp(.8rem, 3vw, 1rem);
+}
+
+.theContent h6 {
+    font-size: clamp(.7rem, 3vw, .9rem);
+}
+
+.theContent .wp-caption {
+    aspect-ratio: 16/9;
+}
+.theContent .wp-caption img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}

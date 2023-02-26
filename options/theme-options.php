@@ -91,7 +91,7 @@ function mn_theme_options()
         ->add_fields([
             // google site verification
             Field::make('text', 'goolge_site_verification_mn', 'Google Site Verification')
-            ->set_classes( 'googleSiteVer' ),
+                ->set_classes('googleSiteVer'),
             // google map api
             Field::make('text', 'google_map_api_mn', 'Google Map API'),
             // facebook app id
@@ -99,13 +99,9 @@ function mn_theme_options()
             // bing site verification
             Field::make('text', 'bing_site_verification_mn', 'Bing Site Verification')
                 ->set_help_text('masukan kode bing site verification')
-                ->set_classes( 'bingSiteVer' ),
+                ->set_classes('bingSiteVer'),
             // yandex site verification
             Field::make('text', 'yandex_site_verification_mn', 'Yandex Site Verification'),
-            // recaptcha site key
-            Field::make('text', 'recaptcha_site_key_mn', 'Recaptcha Site Key'),
-            // recaptcha secret key
-            Field::make('text', 'recaptcha_secret_key_mn', 'Recaptcha Secret Key'),
             // option google analytics or google tag manager
             Field::make('select', 'google_tracking_anaytic_option_mn', 'Pilih salah satu')
                 ->set_help_text('pilih salah satu untuk menampilkan google analytics atau google tag manager')
@@ -154,6 +150,7 @@ function mn_theme_options()
                 ->set_help_text('pilih untuk mengaktifkan, fungsi: Jika tidak ada featured image maka akan menampilkan gambar ini'),
             // fallback featured image
             Field::make('image', 'fallback_featured_image_mn', 'Fallback Featured Image')
+                ->set_required(true)
                 ->set_value_type('url')
                 ->set_help_text('Jika tidak ada featured image maka akan menampilkan gambar ini')
                 ->set_conditional_logic([
@@ -162,10 +159,6 @@ function mn_theme_options()
                         'value' => true,
                     ]
                 ]),
-            // enable disabel comment form
-            Field::make('checkbox', 'enable_disable_comment_form_mn', 'Enable/Disable Comment Form')
-                ->set_option_value('yes')
-                ->set_help_text('pilih untuk mengaktifkan comment form'),
             // enable disable author box
             Field::make('checkbox', 'enable_disable_author_box_mn', 'Enable/Disable Author Box')
                 ->set_option_value('yes')
@@ -227,15 +220,118 @@ function mn_theme_options()
             Field::make('checkbox', 'disable_gutenburg_mn', 'Disable Gutenburg')
                 ->set_option_value('yes')
                 ->set_help_text('pilih untuk menonaktifkan gutenburg'),
-                // enabling limit login attempts
+
+            // enabling auto alt and title image in post
+            Field::make('checkbox', 'enabling_auto_alt_and_title_image_in_post_mn', 'Enabling Auto Alt and Title Image in Post')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk mengaktifkan auto alt and title image in post, Fungsi: jika seorang user upload gambar maka secara otomatis akan di tambahkan alt dan title gambar tersebut'),
+
+                // remove website field from comment form
+            Field::make('checkbox', 'remove_website_field_from_comment_form_mn', 'Remove Website Field From Comment Form')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk menghapus website field dari comment form'),
+
+
+
+            // enabling ferboden register
+
+        ]);
+
+
+
+
+    // security options
+    Container::make('theme_options', 'Security Options')
+        ->set_page_parent($theme_options)
+        ->add_fields([
+            // option to enabline recaptcha
+            Field::make('checkbox', 'enabling_recaptcha_mn', 'Enabling Recaptcha')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk mengaktifkan recaptcha'),
+
+            // recaptcha site key
+            Field::make('text', 'recaptcha_site_key_mn', 'Recaptcha Site Key')
+                ->set_required(true)
+                ->set_conditional_logic([
+                    [
+                        'field' => 'enabling_recaptcha_mn',
+                        'value' => true,
+                    ]
+                ]),
+            // recaptcha secret key
+            Field::make('text', 'recaptcha_secret_key_mn', 'Recaptcha Secret Key')
+                ->set_required(true)
+                ->set_conditional_logic([
+                    [
+                        'field' => 'enabling_recaptcha_mn',
+                        'value' => true,
+                    ]
+                ]),
+
+            //option to enabling recaptcha on login form
+            Field::make('checkbox', 'enabling_recaptcha_on_login_form_mn', 'Enabling Recaptcha On Login Form')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk mengaktifkan recaptcha pada form login')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'enabling_recaptcha_mn',
+                        'value' => true,
+                    ]
+                ]),
+
+            // option to enabling recaptcha on register form
+            Field::make('checkbox', 'enabling_recaptcha_on_register_form_mn', 'Enabling Recaptcha On Register Form')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk mengaktifkan recaptcha pada form register')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'enabling_recaptcha_mn',
+                        'value' => true,
+                    ]
+                ]),
+
+            // option to enabling recaptcha on comment form
+            Field::make('checkbox', 'enabling_recaptcha_on_comment_form_mn', 'Enabling Recaptcha On Comment Form')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk mengaktifkan recaptcha pada form comment')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'enabling_recaptcha_mn',
+                        'value' => true,
+                    ]
+                ]),
+
+            // option to enabling recaptcha on lost password form
+            Field::make('checkbox', 'enabling_recaptcha_on_lost_password_form_mn', 'Enabling Recaptcha On Lost Password Form')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk mengaktifkan recaptcha pada form lost password')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'enabling_recaptcha_mn',
+                        'value' => true,
+                    ]
+                ]),
+
+            // option to enabling recaptcha on reset password form
+            Field::make('checkbox', 'enabling_recaptcha_on_reset_password_form_mn', 'Enabling Recaptcha On Reset Password Form')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk mengaktifkan recaptcha pada form reset password')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'enabling_recaptcha_mn',
+                        'value' => true,
+                    ]
+                ]),
+
+            // enabling limit login attempts
             Field::make('checkbox', 'enabling_limit_login_attempts_mn', 'Enabling Limit Login Attempts')
                 ->set_option_value('yes')
                 ->set_help_text('pilih untuk mengaktifkan limit login attempts'),
-                // enabling ferboden login
+            // enabling ferboden login
             Field::make('checkbox', 'enabling_ferboden_login_mn', 'Enabling Ferboden Login')
                 ->set_option_value('yes')
                 ->set_help_text('pilih untuk mengaktifkan ferboden login, Fungsi: jika seorang user mencoba login dengan username yang tertera didalam list maka akan secara otomatis akan di blokir dan tidak bisa mengunjungi website ini'),
-                // list ferboden login
+            // list ferboden login
             Field::make('textarea', 'list_ferboden_login_mn', 'List Ferboden Login')
                 ->set_help_text('masukan list username yang tidak boleh login dipisahkan dengan koma (,), contoh: admin,administrator,root,superadmin,superuser,Admin,Administrator,Root,Superadmin,Superuser')
                 ->set_default_value('admin,administrator,root,superadmin,superuser,Admin,Administrator,Root,Superadmin,Superuser')
@@ -245,7 +341,6 @@ function mn_theme_options()
                         'value' => true,
                     ]
                 ]),
-                // enabling ferboden register
 
         ]);
 
