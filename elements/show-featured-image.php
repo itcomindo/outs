@@ -15,7 +15,7 @@ function mn_show_featured_image()
             'src' => get_the_post_thumbnail_url($postID, 'full'),
         );
         $postFeaturedImage = get_the_post_thumbnail($postID, 'full', $attr);
-        $postFeaturedImage = '<div class="globalPostFeaturedImage">' . $postFeaturedImage . '</div>';
+        $postFeaturedImage = '<div class="globalPostFeaturedImage">' . $postFeaturedImage . '</div>' . mn_show_unsplash_author();
         return $postFeaturedImage;
     } else {
         $fallback = mn_show_fallback_featured_image();

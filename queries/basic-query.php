@@ -26,11 +26,13 @@ function show_basic_query()
                     ?>
                             <div class="qItem">
                                 <div class="qItemTop">
+
                                     <a title="<?php echo $title; ?>" href="<?php echo $permalink; ?>">
                                         <?php echo mn_show_featured_image(); ?>
                                     </a>
                                 </div>
                                 <div class="qItemBot">
+                                    <?php echo mn_show_post_views(); ?>
                                     <h3 class="globalQTitle"><a title="<?php echo $title; ?>" href="<?php echo $permalink; ?>"><?php echo $title; ?></a></h3>
                                     <?php echo mn_show_post_excerpt(160); ?>
                                     <?php echo mn_show_comments_count(); ?>
