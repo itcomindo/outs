@@ -3,9 +3,9 @@ defined('ABSPATH') || exit;
 /**
  * Show comments count
 */
-function mn_show_comments_count()
+function mnel_show_comments_count()
 {
-    $postID = mn_postID();
+    $postID = mncore_postID();
     $comments_count = get_comments_number($postID);
     // if post comment enabled
     if (comments_open($postID)) {

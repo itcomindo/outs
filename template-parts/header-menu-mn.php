@@ -1,7 +1,7 @@
 <?php
 defined('ABSPATH') || exit;
 
-function mn_header_menu() {
+function mntp_header_menu() {
     ?>
     <div id="headerMenuPr" class="section">
         <div class="container">

@@ -4,7 +4,7 @@
  * Author: Budi Haryono
  * Author URI: https://budiharyono.com/
  * Description: TheThemeDescription
- * Version: 1.0.0
+ * Version: 2.0.0
  */
 
 ::-webkit-scrollbar {
@@ -115,6 +115,7 @@ li {
 .section {
   width: 100vw;
   max-width: 100%;
+  overflow: hidden;
 }
 .globalSection {
   padding-top: 3em;

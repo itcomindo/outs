@@ -6,12 +6,12 @@ defined('ABSPATH') || exit;
  * Get postID from single, page, tag, author
  * @param $link - link to author page or not (true/false) default is true
  */
-function mn_show_post_author($link)
+function mnel_show_post_author($link)
 {
 ?>
     <div class="globalPostAuthorWr">
         <?php
-        $postID = mn_postID();
+        $postID = mncore_postID();
         $authorID = get_post_field('post_author', $postID);
         if ($link) {
             $authorLink = get_author_posts_url($authorID);

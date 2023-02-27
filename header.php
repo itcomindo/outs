@@ -14,20 +14,21 @@ defined('ABSPATH') || exit;
     <link rel="shortcut icon" href="<?php echo $favicon; ?>" type="image/x-icon" />
     <meta name="google-site-verification" content="t0f4zeLk5-eCUVe-mmb-v6npo10aUcuiv8RyYsj9j-g" />
     <!-- SEO Plugin by Budiharyono.com -->
-    <?php echo mn_seo(); ?>
+    <?php echo mnplug_seo(); ?>
+    
     
     <?php mn_google_site_verification(); ?>
     <?php mn_bing_site_verification(); ?>
-    <?php echo mn_facebook_api(); ?>
+    <?php echo mnoption_facebook_api(); ?>
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
     <?php
 
-    mn_topbar();
-    mn_header();
-    mn_header_menu();
+    mntp_topbar();
+    mntp_header();
+    mntp_header_menu();
     
     
     wp_body_open();

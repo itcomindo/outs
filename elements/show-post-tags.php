@@ -4,9 +4,9 @@ defined('ABSPATH') || exit;
 /**
  * show post tags
  */
-function mn_show_post_tags()
+function mnel_show_post_tags()
 {
-    $postID = mn_postID();
+    $postID = mncore_postID();
     $tags = get_the_tags($postID);
     if ($tags) {
 ?>

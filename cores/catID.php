@@ -4,10 +4,10 @@ defined('ABSPATH') || exit;
 /*
  * Get pageID from page
 */
-function mn_catID()
+function mncore_catID()
 {
     if (is_single()) {
-        $postID = mn_postID();
+        $postID = mncore_postID();
         $categories = get_the_category($postID);
         $catID = $categories[0]->term_id;
         return $catID;

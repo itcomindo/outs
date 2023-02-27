@@ -28,19 +28,19 @@ function show_basic_query()
                                 <div class="qItemTop">
 
                                     <a title="<?php echo $title; ?>" href="<?php echo $permalink; ?>">
-                                        <?php echo mn_show_featured_image(); ?>
+                                        <?php echo mnel_show_featured_image(); ?>
                                     </a>
                                 </div>
                                 <div class="qItemBot">
-                                    <?php echo mn_show_post_views(); ?>
+                                    <?php echo mnel_show_post_views(); ?>
                                     <h3 class="globalQTitle"><a title="<?php echo $title; ?>" href="<?php echo $permalink; ?>"><?php echo $title; ?></a></h3>
-                                    <?php echo mn_show_post_excerpt(160); ?>
-                                    <?php echo mn_show_comments_count(); ?>
-                                    <?php echo mn_show_readmore_button(); ?>
-                                    <?php echo mn_show_post_author(true); ?>
-                                    <?php echo mn_show_post_date(); ?>
-                                    <?php echo mn_show_post_tags(); ?>
-                                    <?php echo mn_show_post_category(); ?>
+                                    <?php echo mnel_show_post_excerpt(160); ?>
+                                    <?php echo mnel_show_comments_count(); ?>
+                                    <?php echo mnel_show_readmore_button(); ?>
+                                    <?php echo mnel_show_post_author(true); ?>
+                                    <?php echo mnel_show_post_date(); ?>
+                                    <?php echo mnel_show_post_tags(); ?>
+                                    <?php echo mnel_show_post_category(); ?>
                                 </div>
                             </div>
                     <?php

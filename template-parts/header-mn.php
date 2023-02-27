@@ -1,7 +1,7 @@
 <?php
 defined('ABSPATH') || exit;
 
-function mn_header() {
+function mntp_header() {
     ?>
     <header class="section">
         <div class="container">

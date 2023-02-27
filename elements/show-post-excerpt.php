@@ -4,8 +4,8 @@ defined('ABSPATH') || exit;
  * function to create post excerpt with conditinal
  * characters limit, source etc
  */
-function mn_show_post_excerpt($limit = 25, $class='globalReadmore') {
-    $postID = mn_postID();
+function mnel_show_post_excerpt($limit = 25, $class='globalReadmore') {
+    $postID = mncore_postID();
     $excerpt = get_the_excerpt($postID);
     $title = get_the_title($postID);
     // count the number of characters in the string

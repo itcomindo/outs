@@ -8,6 +8,9 @@ function crb_load()
     require_once('carbon-fields/vendor/autoload.php');
     \Carbon_Fields\Carbon_Fields::boot();
 }
+
+
+
 /**
  * ========================================================
  * ? carbon fields google map api key start
@@ -44,6 +47,13 @@ add_theme_support('title-tag');
 // add support widgets
 add_theme_support('widgets');
 
+// include options
+include get_template_directory() . '/options/options.php';
+
+
+
+
+
 // Include admin
 include get_template_directory() . '/admin/admin.php';
 
@@ -74,10 +84,6 @@ include get_template_directory() . '/forms/forms.php';
 
 // include menus
 include get_template_directory() . '/menus/menus.php';
-
-// include options
-include get_template_directory() . '/options/options.php';
-
 
 
 // include queries

@@ -1,6 +1,6 @@
 <?php
 defined('ABSPATH') || exit;
-function mn_topbar()
+function mntp_topbar()
 {
 ?>
     <div id="topbar" class="section">

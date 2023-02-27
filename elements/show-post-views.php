@@ -6,7 +6,7 @@ function page_views_mn()
 {
     // global $post;
     // $postID = $post->ID;
-    $postID = mn_postID();
+    $postID = mncore_postID();
     if (!empty($postID)) {
         $count_key = 'page_views_mn';
         $count = get_post_meta($postID, $count_key, true);
@@ -44,7 +44,7 @@ function get_page_views_mn($postID)
 }
 
 /*================== Show Post Views ==================*/
-function mn_show_post_views($class = 'globalPostViewCount')
+function mnel_show_post_views($class = 'globalPostViewCount')
 {
     // global $post;
     $post_views = get_page_views_mn(get_the_ID());

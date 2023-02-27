@@ -1,0 +1,5 @@
+
+
+--unsolved--
+
+- create filter to show posts from specific category in association field

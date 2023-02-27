@@ -12,10 +12,10 @@ defined('ABSPATH') || exit;
  * @param string $layout the layout of the query card or list
  */
 
-function mn_show_global_query($by = "tag", $postPerPage = 10, $headTitle = "Related Posts:", $layout = "card")
+function mnqu_show_global_query($by = "tag", $postPerPage = 10, $headTitle = "Related Posts:", $layout = "card")
 {
     if ($by == 'tag') {
-        $tagID = mn_tagID();
+        $tagID = mncore_tagID();
         $args = array(
             'post_type' => 'post',
             'posts_per_page' => $postPerPage,
@@ -25,7 +25,7 @@ function mn_show_global_query($by = "tag", $postPerPage = 10, $headTitle = "Rela
             'tag__in' => array($tagID),
         );
     } elseif ($by == 'category') {
-        $catID = mn_catID();
+        $catID = mncore_catID();
         $args = array(
             'post_type' => 'post',
             'posts_per_page' => $postPerPage,
@@ -82,7 +82,7 @@ function show_related_post_card_layout()
         <div class="qItem">
             <div class="globalQTop">
                 <a title="<?php echo get_the_title(); ?>" href="<?php echo get_the_permalink(); ?>">
-                    <?php echo mn_show_featured_image(); ?>
+                    <?php echo mnel_show_featured_image(); ?>
                 </a>
             </div>
             <div class="globalQBot">
@@ -94,11 +94,11 @@ function show_related_post_card_layout()
                     </h3>
                 </div>
                 <div class="globalQMetaWr">
-                    <?php echo mn_show_post_date(); ?>
-                    <?php echo mn_show_post_author(false); ?>
-                    <?php echo mn_show_comments_count(); ?>
-                    <?php echo mn_show_post_excerpt(50); ?>
-                    <?php echo mn_show_readmore_button('', 'Baca Artikel'); ?>
+                    <?php echo mnel_show_post_date(); ?>
+                    <?php echo mnel_show_post_author(false); ?>
+                    <?php echo mnel_show_comments_count(); ?>
+                    <?php echo mnel_show_post_excerpt(50); ?>
+                    <?php echo mnel_show_readmore_button('', 'Baca Artikel'); ?>
                 </div>
             </div>
         </div>

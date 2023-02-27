@@ -1,7 +1,7 @@
 <?php
 defined('ABSPATH') || exit;
 
-function mn_facebook_api() {
+function mnoption_facebook_api() {
     $fapi = carbon_get_theme_option('facebook_app_id_mn');
     if (empty($fapi)) {
         // do nothing

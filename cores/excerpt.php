@@ -1,7 +1,7 @@
 <?php
 defined('ABSPATH') || exit;
 
-function mn_excerpt() {
+function mncore_excerpt() {
     if (is_single()) {
         // get excerpt
         $excerpt = strlen(get_the_excerpt());

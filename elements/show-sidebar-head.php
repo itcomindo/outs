@@ -1,7 +1,7 @@
 <?php
 defined('ABSPATH') || exit;
 
-function mn_show_sidebar_head($class = "globalSidebarHeadWr", $title = "Sidebar Head")
+function mnel_show_sidebar_head($class = "globalSidebarHeadWr", $title = "Sidebar Head")
 {
 ?>
     <div class="<?php echo $class; ?>">

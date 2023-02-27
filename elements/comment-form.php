@@ -32,7 +32,7 @@ function mn_show_comment_form() {
 
 // post comments
 function mn_show_post_comments() {
-    $postID = mn_postID();
+    $postID = mncore_postID();
     $comments = get_comments(array(
         'post_id' => $postID,
         'status' => 'approve'

@@ -9,22 +9,22 @@ get_header();
             <!-- single left start -->
             <div class="singleLeft singleCol">
                 <?php
-                echo mn_show_featured_image();
+                echo mnel_show_featured_image();
                 $title = get_the_title();
                 echo "<h1 class='globalPostTitle'>$title</h1>";
-                echo mn_show_post_views();
-                echo mn_show_post_tags();
-                echo mn_show_post_author(false);
-                echo mn_show_post_date();
-                echo mn_show_post_category();
-                echo mn_show_comments_count();
+                echo mnel_show_post_views();
+                echo mnel_show_post_tags();
+                echo mnel_show_post_author(false);
+                echo mnel_show_post_date();
+                echo mnel_show_post_category();
+                echo mnel_show_comments_count();
                 ?>
                 <!-- the content start -->
                 <div class="theContent">
                     <?php echo the_content(); ?>
                     <!-- show comment form -->
-                    <?php echo mn_show_global_query('tag', 10, 'Related Post By Tag', 'list'); ?>
-                    <?php echo mn_show_global_query('category', 10, 'Related Post By Category'); ?>
+                    <?php echo mnqu_show_global_query('tag', 10, 'Related Post By Tag', 'list'); ?>
+                    <?php echo mnqu_show_global_query('category', 10, 'Related Post By Category'); ?>
 
                     <?php
                     if (comments_open() || get_comments_number()) {
@@ -44,7 +44,7 @@ get_header();
             <div class="singleRight singleCol">
                 <aside class="singleAside">
                     <div class="singleSidebar">
-                        <?php echo mn_show_sidebar_head('globalSidebarHeadWr', 'Sidebar Head'); ?>
+                        <?php echo mnel_show_sidebar_head('globalSidebarHeadWr', 'Sidebar Head'); ?>
                     </div>
                 </aside>
             </div>
