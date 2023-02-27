@@ -24,14 +24,3 @@ add_filter('script_loader_tag', function ($tag, $handle) {
     return str_replace("type='text/javascript'", '', $tag);
 }, 10, 2);
 
-/**
- * remove tag <p></p> that wrap around image
-*/
-function remove_img_p_tags($content)
-{
-    // Remove <p> tags that wrap <img> tags
-    $content = preg_replace('/<p>(\s*)(<img .* \/>)(\s*)<\/p>/', '\2', $content);
-    return $content;
-}
-add_filter('the_content', 'remove_img_p_tags');
-

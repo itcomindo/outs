@@ -42,8 +42,8 @@ get_header();
             <!-- single left end -->
             <!-- singler right start -->
             <div class="singleRight singleCol">
-                <aside class="singleAside">
-                    <div class="singleSidebar">
+                <aside class="globalAsideWr">
+                    <div class="globalSidebar">
                         <?php echo mnel_show_sidebar_head('globalSidebarHeadWr', 'Sidebar Head'); ?>
                     </div>
                 </aside>
