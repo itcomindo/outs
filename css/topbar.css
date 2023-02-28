@@ -1,5 +1,5 @@
 #topbar {
-    background-color: black;
+    background-color: var(--colpal-11);
     color: white;
     height: 40px;
     padding: 0;

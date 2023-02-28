@@ -35,6 +35,12 @@ function load_mm_css()
     if (is_home()) {
         wp_enqueue_style('home-css', get_template_directory_uri() . '/css/home.css', array(), $version, 'all');
         wp_enqueue_style('home-media-css', get_template_directory_uri() . '/css/home-media.css', array('home-css'), $version, 'all');
+        // load flickity css from cdnjs
+        wp_enqueue_style('flickity-css', 'https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css', array(), '2.2.2', 'all');
+        // fallback flickity.css if CDN is not available
+        if (!wp_style_is('flickity-css', 'enqueued')) {
+            wp_enqueue_style('flickity-css', get_template_directory_uri() . '/libs/flickity.min.css', array(), '2.2.2', 'all');
+        }
     }
     if (is_single()) {
         wp_enqueue_style('single-css', get_template_directory_uri() . '/css/single.css', array(), $version, 'all');

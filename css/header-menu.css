@@ -1,6 +1,6 @@
 #headerMenuPr {
     height: 40px;
-    background-color: black;
+    background-color: var(--colpal-10);
     color: wheat;
 }
 #headerMenuPr .container {

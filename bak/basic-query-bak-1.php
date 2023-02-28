@@ -19,7 +19,6 @@ function show_basic_query($postPerPage = 7, $sticky = false)
                 <div class="qOneBot qItemWr">
                     <?php
                     $query = new WP_Query($args);
-                    $count = 0;
                     if ($query->have_posts()) {
                         while ($query->have_posts()) {
                             $query->the_post();
@@ -41,7 +40,7 @@ function show_basic_query($postPerPage = 7, $sticky = false)
                                 </h3>
                                     <?php //echo mnel_show_post_excerpt(60); ?>
                                     <?php // echo mnel_show_comments_count(); ?>
-                                    <?php echo mnel_show_readmore_button(); ?>
+                                    <?php // echo mnel_show_readmore_button(); ?>
                                     <?php // echo mnel_show_post_author(true); ?>
                                     <?php // echo mnel_show_post_date(); ?>
                                     <?php // echo mnel_show_post_tags(); ?>
@@ -49,15 +48,6 @@ function show_basic_query($postPerPage = 7, $sticky = false)
                                 </div>
                             </div>
                     <?php
-                            $count++;
-                            // if count = 2 then add a div with class qItemStickyWr then insert mnqu_show_sticky_post_query() function
-                            if ($count == 1) {
-                                echo '<div class="qItem thisSticky">';
-                                echo '<div class="stickyWr">';
-                                echo mnqu_show_sticky_post_query(3);
-                                echo '</div>';
-                                echo '</div>';
-                            }
 
                         }
                         wp_reset_postdata();
