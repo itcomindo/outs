@@ -12,6 +12,7 @@ get_header();
                 echo mnel_show_featured_image();
                 $title = get_the_title();
                 echo "<h1 class='globalPostTitle'>$title</h1>";
+                echo mnuser_show_nama_perusahaan(false);
                 echo mnel_show_post_views();
                 echo mnel_show_post_tags();
                 echo mnel_show_post_author(false);

@@ -25,6 +25,9 @@ function mnqu_show_sticky_post_query($postPerPage = 3)
 ?>
             <div class="slideItem">
                 <div class="qItemTop">
+                    <div class="globalLogoAndName">
+                        <?php echo mnuser_show_logo_perusahaan(false, '', '20') . ' ' . mnuser_show_nama_perusahaan(false, 'namaPerusahaanInSlide'); ?>
+                    </div>
                     <?php echo mnel_show_post_views('homePostView'); ?>
                     <a title="<?php echo $title; ?>" href="<?php echo $permalink; ?>">
                         <?php echo mnel_show_featured_image(); ?>
@@ -36,20 +39,8 @@ function mnqu_show_sticky_post_query($postPerPage = 3)
                             <?php echo $title; ?>
                         </a>
                     </h3>
-                    <?php echo mnel_show_post_excerpt(120); 
-                    ?>
-                    <?php // echo mnel_show_comments_count(); 
-                    ?>
-                    <?php echo mnel_show_readmore_button(); 
-                    ?>
-                    <?php // echo mnel_show_post_author(true); 
-                    ?>
-                    <?php // echo mnel_show_post_date(); 
-                    ?>
-                    <?php // echo mnel_show_post_tags(); 
-                    ?>
-                    <?php // echo mnel_show_post_category(); 
-                    ?>
+                    <?php echo mnel_show_post_excerpt(120); ?>
+                    <?php echo mnel_show_readmore_button(); ?>
                 </div>
             </div>
 <?php

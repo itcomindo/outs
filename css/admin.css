@@ -4,3 +4,13 @@
 .bold {
     font-weight: bold;
 }
+
+.user-rich-editing-wrap,
+.user-admin-color-wrap,
+.user-comment-shortcuts-wrap,
+.user-admin-bar-front-wrap,
+.form-table[role="presentation"],
+.create-application-password.form-wrap {
+    /* display: none; */
+}
+
