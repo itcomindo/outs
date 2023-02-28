@@ -1,3 +1,109 @@
+.singleWr {
+  width: 100%;
+  display: flex;
+}
+.singleLeft {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  background-color: antiquewhite;
+}
+.singleFeaturedImageWr,
+.globalPostFeaturedImage {
+  width: 100%;
+}
+.globalFeaturedImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.singlePostTitleWr,
+.singleMetaWr,
+.theContent,
+.singleTagWr,
+.singleCommentFormWr {
+  padding: 8px 16px;
+}
+.singlePostViewsWr {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 80%;
+  line-height: 1;
+  padding: 4px 16px;
+}
+
+.singleMetaWr,
+.singleAuthorWr {
+  width: 100%;
+  overflow: hidden;
+}
+.singleAuthorWr img{
+  margin-left: 6px;
+}
+.singleAuthorWr {
+  display: flex;
+  align-items: center;
+}
+
+.singleTagWr,
+.globalTagWr {
+  width: 100%;
+  overflow: hidden;
+}
+.singleCommentFormWr {
+  width: 100%;
+}
+
+.globalTagList {
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+.globalTagList li {
+  font-size: 70%;
+  padding: 4px 6px;
+  margin: 6px;
+  background-color: var(--colpal-11);
+  color: white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+
+
+
+.singleRight {
+  width: 300px;
+  display: flex;
+  margin-left: 4px;
+  background-color: var(--colpal-10);
+}
+
+.globalSidebarHeadWr {
+  width: 100%;
+  background-color: var(--colpal-11);
+  color: white;
+  padding: 0 4px;
+}
+.globalSidebarHead {
+  font-size: clamp(1em, 2.5vw, 1.1em);
+}
+.globalAsideWr {
+  width: 100%;
+}
+.globalSidebar {
+  width: 100%;
+}
+
+
 .theContent {
   overflow: hidden;
 }
@@ -51,4 +157,16 @@
 }
 .globalTableInContent td {
   padding: 4px 8px;
+}
+
+
+@media screen and (max-width: 992px) {
+  .singleWr {
+    flex-direction: column;
+  }
+  .singleLeft,
+  .singleRight {
+    width: 100%;
+    flex: unset;
+  }
 }

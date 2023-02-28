@@ -12,12 +12,17 @@ function mntp_footer()
 ?>
     <footer class="section globalSection">
         <div class="container">
-            <div id="fooTop" class="foRow"></div>
+            <div id="fooTop" class="foRow">
+                <h2 class="globalSectionHead">
+                    outsourcing.web.id
+                </h2>
+            </div>
             <div id="fooMid" class="foRow">
                 <!-- footer Left -->
                 <div class="fooMidLeft fooCol">
                     <div class="fooHeadWr">
                         <h3>Footer Left</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque temporibus deleniti error nam dolores aut ullam, molestiae harum ex sed facere natus animi, maxime aperiam a omnis doloribus veritatis magni?</p>
                     </div>
                 </div>
                 <!-- footer midle -->

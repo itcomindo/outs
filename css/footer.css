@@ -1,0 +1,60 @@
+footer {
+  background-color: var(--colpal-1);
+  color: white;
+  padding-top: 5em !important;
+  padding-bottom: 5em !important;
+}
+#fooTop {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#fooTop h2 {
+  text-align: center;
+}
+.foRow {
+  color: white;
+}
+
+#fooMid {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.fooMidLeft,
+.fooMidMid,
+.fooMidRight {
+  width: calc(100% / 3 - 24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5em 16px;
+}
+
+.fooHeadWr h3 {
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+}
+#cp {
+    background: black;
+    color: white;
+}
+#cp:before {
+    background: linear-gradient(to bottom, #333, #000);
+}
+@media screen and (max-width: 800px) {
+  #fooMid {
+    flex-direction: column;
+  }
+  .fooMidLeft,
+  .fooMidMid,
+  .fooMidRight {
+    width: calc(100% - 24px);
+    margin-bottom: 16px;
+    text-align: left;
+  }
+}

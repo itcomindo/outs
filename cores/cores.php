@@ -8,3 +8,6 @@ include get_template_directory() . '/cores/tagID.php';
 include get_template_directory() . '/cores/catID.php';
 include get_template_directory() . '/cores/pageID.php';
 include get_template_directory() . '/cores/excerpt.php';
+include get_template_directory() . '/cores/custom-featured-image.php';
+include get_template_directory() . '/cores/author-role.php';
+include get_template_directory() . '/cores/post-type.php';

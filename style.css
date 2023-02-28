@@ -133,8 +133,14 @@ li {
 }
 
 /* globalClasses */
-
-
+.globalLogoAndName {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.globalLogoAndName img{
+  margin-right: 6px;
+}
 .globalFiveStars i {
   color: goldenrod;
   font-size: 8px;
@@ -166,14 +172,12 @@ p {
   font-size: clamp(90%, 5vw, 1rem);
   font-weight: 400;
   line-height: 1.5;
-  color: var(--colpal-primary);
   font-family: var(--font-primary);
 }
 h1 {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
   line-height: 1.5;
-  color: var(--colpal-primary);
   font-family: var(--font-quaternary);
 }
 h2 {
@@ -181,34 +185,29 @@ h2 {
   font-weight: 700;
   line-height: 1.5;
   font-family: var(--font-quaternary);
-  color: var(--colpal-primary);
 }
 h3 {
   font-size: clamp(1.5rem, 5vw, 2.5rem);
   font-weight: 700;
   line-height: 1.5;
-  color: var(--colpal-primary);
   font-family: var(--font-quaternary);
 }
 h4 {
   font-size: clamp(1.25rem, 5vw, 2rem);
   font-weight: 700;
   line-height: 1.5;
-  color: var(--colpal-primary);
   font-family: var(--font-quaternary);
 }
 h5 {
   font-size: clamp(1rem, 5vw, 1.5rem);
   font-weight: 700;
   line-height: 1.5;
-  color: var(--colpal-primary);
   font-family: var(--font-quaternary);
 }
 h6 {
   font-size: clamp(0.875rem, 5vw, 1.25rem);
   font-weight: 700;
   line-height: 1.5;
-  color: var(--colpal-primary);
   font-family: var(--font-secondary);
 }
 

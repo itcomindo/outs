@@ -30,7 +30,8 @@ function show_basic_query($postPerPage = 7, $sticky = false)
                                 <div class="qItemTop card-<?php echo $count; ?>-top">
                                     <?php echo mnel_show_post_views('homePostView'); ?>
                                     <a title="<?php echo $title; ?>" href="<?php echo $permalink; ?>">
-                                        <?php echo mnel_show_featured_image(); ?>
+                                        <?php //echo mnel_show_featured_image(); ?>
+                                        <?php echo mncore_custom_featured_image(); ?>
                                     </a>
                                 </div>
                                 <div class="qItemBot card-<?php echo $count; ?>-bot">

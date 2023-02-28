@@ -72,6 +72,7 @@ function load_mm_css()
     wp_enqueue_style('topbar-css', get_template_directory_uri() . '/css/topbar.css', array(), $version, 'all');
     wp_enqueue_style('header-css', get_template_directory_uri() . '/css/header.css', array(), $version, 'all');
     wp_enqueue_style('header-menu-css', get_template_directory_uri() . '/css/header-menu.css', array(), $version, 'all');
+    wp_enqueue_style('footer-css', get_template_directory_uri() . '/css/footer.css', array(), $version, 'all');
 
 
     // load global media css
