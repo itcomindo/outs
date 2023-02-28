@@ -14,6 +14,8 @@ include get_template_directory() . '/elements/show-sidebar-head.php';
 include get_template_directory() . '/elements/show-post-views.php';
 include get_template_directory() . '/elements/show-login-button.php';
 include get_template_directory() . '/elements/show-logout-button.php';
+include get_template_directory() . '/elements/show-five-stars.php';
+include get_template_directory() . '/elements/show-icons.php';
 
 // next element will release soon
 /*

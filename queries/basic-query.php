@@ -19,46 +19,53 @@ function show_basic_query($postPerPage = 7, $sticky = false)
                 <div class="qOneBot qItemWr">
                     <?php
                     $query = new WP_Query($args);
-                    $count = 0;
+                    $count = 1;
                     if ($query->have_posts()) {
                         while ($query->have_posts()) {
                             $query->the_post();
                             $title = get_the_title();
                             $permalink = get_the_permalink();
                     ?>
-                            <div class="qItem">
-                                <div class="qItemTop">
+                            <div class="qItem theGrid card-<?php echo $count; ?>">
+                                <div class="qItemTop card-<?php echo $count; ?>-top">
                                     <?php echo mnel_show_post_views('homePostView'); ?>
                                     <a title="<?php echo $title; ?>" href="<?php echo $permalink; ?>">
                                         <?php echo mnel_show_featured_image(); ?>
                                     </a>
                                 </div>
-                                <div class="qItemBot">
+                                <div class="qItemBot card-<?php echo $count; ?>-bot">
+                                    <small class="qItemDate">
+                                        <?php echo mnel_show_post_date(); ?>
+                                    </small>
                                     <h3 class="globalQTitle">
                                         <a title="<?php echo $title; ?>" href="<?php echo $permalink; ?>">
-                                        <?php echo $title; ?>
-                                    </a>
-                                </h3>
-                                    <?php //echo mnel_show_post_excerpt(60); ?>
-                                    <?php // echo mnel_show_comments_count(); ?>
+                                            <?php echo $title; ?>
+                                        </a>
+                                    </h3>
+                                    <div class="qItemExcerptWr">
+                                        <?php echo mnel_show_post_excerpt(60); ?>
+                                    </div>
+                                    <?php // echo mnel_show_comments_count(); 
+                                    ?>
                                     <?php echo mnel_show_readmore_button(); ?>
-                                    <?php // echo mnel_show_post_author(true); ?>
-                                    <?php // echo mnel_show_post_date(); ?>
-                                    <?php // echo mnel_show_post_tags(); ?>
-                                    <?php // echo mnel_show_post_category(); ?>
+                                    <?php // echo mnel_show_post_author(true); 
+                                    ?>
+                                    <?php // echo mnel_show_post_tags(); 
+                                    ?>
+                                    <?php // echo mnel_show_post_category(); 
+                                    ?>
                                 </div>
                             </div>
                     <?php
                             $count++;
                             // if count = 2 then add a div with class qItemStickyWr then insert mnqu_show_sticky_post_query() function
-                            if ($count == 1) {
-                                echo '<div class="qItem thisSticky">';
-                                echo '<div class="stickyWr">';
-                                echo mnqu_show_sticky_post_query(3);
+                            if ($count == 2) {
+                                echo '<div class="qItem theSlide">';
+                                echo '<div class="theSlideWr">';
+                                echo mnqu_show_sticky_post_query(5);
                                 echo '</div>';
                                 echo '</div>';
                             }
-
                         }
                         wp_reset_postdata();
                     } else {

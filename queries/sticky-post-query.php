@@ -23,7 +23,7 @@ function mnqu_show_sticky_post_query($postPerPage = 3)
             $title = get_the_title();
             $permalink = get_the_permalink();
 ?>
-            <div class="qStickyItem">
+            <div class="slideItem">
                 <div class="qItemTop">
                     <?php echo mnel_show_post_views('homePostView'); ?>
                     <a title="<?php echo $title; ?>" href="<?php echo $permalink; ?>">

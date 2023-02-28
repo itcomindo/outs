@@ -1,0 +1,82 @@
+@media screen and (max-width: 992px) {
+  .qItemWr {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card-2 {
+    grid-column: 1 / 3;
+  }
+  .card-2-top {
+    position: absolute;
+    height: 100%;
+  }
+  .card-2-bot {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+  }
+  .card-2-bot .globalQTitle {
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+  }
+  .card-2-bot .qItemExcerptWr {
+    display: block;
+  }
+  .card-2-bot .qItemExcerptWr p {
+    color: white;
+    font-size: 80%;
+  }
+}
+
+/* media screen max 480px */
+@media screen and (max-width: 480px) {
+  .qItemWr {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+  }
+  .qItem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .theSlide {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    order: 0;
+    grid-column: unset !important;
+    margin-bottom: 16px;
+    background-color: black;
+    height: 30em;
+  }
+  .theSlideWr {
+    height: 100%;
+  }
+  .slideItem {
+    height: 100%;
+  }
+  .slideItem .qItemBot {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+  .card-1 {
+    order: 1;
+  }
+  .card-2 {
+    grid-column: unset;
+  }
+  .card-2-top {
+    position: relative;
+    height: 10em;
+  }
+  .card-2-bot {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    color: white;
+  }
+  .card-2-bot .globalQTitle {
+    font-size: clamp(0.5rem, 3vw, 0.8rem);
+  }
+}

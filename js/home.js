@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     jQuery(function () {
-        jQuery('.stickyWr').flickity({
+        jQuery('.theSlideWr').flickity({
             // options
             cellAlign: 'center',
             contain: true,
@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             autoPlay: 3000,
             pauseAutoPlayOnHover: false,
             prevNextButtons: false,
-            pageDots: false,
+            pageDots: true,
         });
     });
 });
