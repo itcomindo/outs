@@ -10,7 +10,7 @@ function mncore_tagID()
         $tags = get_the_tags($postID);
         $tagID = $tags[0]->term_id;
         return $tagID;
-    } else {
+    } elseif (is_tag()) {
         $tagID = get_queried_object_id();
         return $tagID;
     }

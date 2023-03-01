@@ -11,3 +11,5 @@ include get_template_directory() . '/cores/excerpt.php';
 include get_template_directory() . '/cores/custom-featured-image.php';
 include get_template_directory() . '/cores/author-role.php';
 include get_template_directory() . '/cores/post-type.php';
+include get_template_directory() . '/cores/wa-message.php';
+include get_template_directory() . '/cores/post-id-in-tag.php';

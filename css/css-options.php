@@ -43,7 +43,7 @@ function load_mm_css()
             wp_enqueue_style('flickity-css', get_template_directory_uri() . '/libs/flickity.min.css', array(), '2.2.2', 'all');
         }
     }
-    if (is_single()) {
+    if (is_single() || is_tag()) {
         wp_enqueue_style('single-css', get_template_directory_uri() . '/css/single.css', array(), $version, 'all');
         wp_enqueue_style('single-media-css', get_template_directory_uri() . '/css/single-media.css', array('single-css'), $version, 'all');
     } elseif (is_page()) {
@@ -67,8 +67,9 @@ function load_mm_css()
     } else {
         // wait
     }
-
+    
     // temporary CSS
+    wp_enqueue_style('chatbox-css', get_template_directory_uri() . '/css/chatbox.css', array(), $version, 'all');
     wp_enqueue_style('topbar-css', get_template_directory_uri() . '/css/topbar.css', array(), $version, 'all');
     wp_enqueue_style('header-css', get_template_directory_uri() . '/css/header.css', array(), $version, 'all');
     wp_enqueue_style('header-menu-css', get_template_directory_uri() . '/css/header-menu.css', array(), $version, 'all');

@@ -50,3 +50,5 @@ function mntp_footer()
 <?php
 
 }
+
+

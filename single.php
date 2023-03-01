@@ -15,10 +15,7 @@ get_header();
                     <?php echo mncore_custom_featured_image(); ?>
                 </div>
                 <div class="singlePostTitleWr">
-                    <?php
-                    $title = get_the_title();
-                    echo "<h1 class='globalPostTitle'>$title</h1>";
-                    ?>
+                    <?php echo '<h1 class="globalPostTitle">'. get_the_title() .'</h1>'; ?>
                 </div>
                 <div class="singleMetaWr">
                     <div class="singleAuthorWr">
@@ -34,13 +31,13 @@ get_header();
                         ?>
 
                     </div>
-
+                    
+                    <?php echo mnel_show_post_date(); ?>
+                    <?php echo mnel_show_post_category(); ?>
                 </div>
                 <?php
 
 
-                // echo mnel_show_post_date();
-                // echo mnel_show_post_category();
                 // echo mnel_show_comments_count();
                 ?>
                 <!-- the content start -->
@@ -57,7 +54,7 @@ get_header();
                     if (comments_open() || get_comments_number()) {
                     ?>
                         <div id="globalCommentWr" class="active">
-                            <?php comments_template(); ?>
+                            <?php //comments_template(); ?>
 
                         </div>
                     <?php
@@ -88,4 +85,7 @@ get_header();
     </div>
 </section>
 <?php
+if (! has_category('journal')) {
+    echo mnel_show_chatbox();
+}
 get_footer();
