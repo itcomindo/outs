@@ -10,5 +10,29 @@ window.addEventListener('DOMContentLoaded', (event) => {
             prevNextButtons: false,
             pageDots: true,
         });
+
+        // ads home after menu
+        var toggleOpenAdsHAM = jQuery('#toggleOpenAdsHAM');
+        var toggleCloseAdsHAM = jQuery('#toggleCloseAdsHAM');
+        var adsHomeAfterMenuWr = jQuery('.adsHomeAfterMenuWr');
+        toggleOpenAdsHAM.slideUp();
+        
+        jQuery(toggleCloseAdsHAM).click(function () {
+            jQuery(this).slideUp(); 
+            toggleOpenAdsHAM.slideDown();
+            adsHomeAfterMenuWr.slideUp();
+        });
+
+        jQuery(toggleOpenAdsHAM).click(function () {
+            jQuery(this).slideUp();
+            toggleCloseAdsHAM.slideDown();
+            adsHomeAfterMenuWr.slideDown();
+        });
+
+
+
+
+
+
     });
 });

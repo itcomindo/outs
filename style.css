@@ -33,7 +33,9 @@ html {
   --colpal-8: #F5704A;
   --colpal-9: #EFB9AD;
   --colpal-10: #828D00;
+  --colpal-10-dark: #656d06;
   --colpal-11: #BC2041;
+  --colpal-11-dark: #8a0d28;
   /* sizing */
   --padding-em-1: 1em;
   --padding-em-2: 2em;
@@ -81,12 +83,13 @@ html {
 }
 body {
   background-color: #eee;
-  font-size: 16px;
   font-family: var(--font-primary);
   color: var(--colpal-primary);
-  line-height: 1.5;
   display: flex;
   flex-direction: column;
+  font-size: clamp(90%, 5vw, 1rem);
+  font-weight: 400;
+  line-height: 1.5;
 }
 /* HTML */
 ul,
@@ -133,6 +136,12 @@ li {
 }
 
 /* globalClasses */
+.mylogo {
+  font-size: clamp(1.1rem, 5vw, 2rem);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: var(--font-secondary);
+}
 .globalLogoAndName {
   width: 100%;
   display: flex;
@@ -168,12 +177,12 @@ li {
   -o-transform: skewX(-20deg);
 }
 /* create h1 - h6, font-size is using clamp seperatedly */
-p {
+/* p {
   font-size: clamp(90%, 5vw, 1rem);
   font-weight: 400;
   line-height: 1.5;
   font-family: var(--font-primary);
-}
+} */
 h1 {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;

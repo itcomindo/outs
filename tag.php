@@ -11,21 +11,17 @@ get_header();
                 <div class="singleFeaturedImageWr">
                     <?php echo mncore_custom_featured_image(); ?>
                 </div>
+
                 <div class="singlePostTitleWr">
-                    <?php // echo '<h1 class="globalPostTitle">' . get_the_title() . '</h1>'; 
-                    ?>
+                    <h1 class="globalPostTitle">
+                        <?php echo mnel_show_custom_tag_title(); ?>
+                    </h1>
                 </div>
-                <?php
 
-
-                // echo mnel_show_comments_count();
-                ?>
                 <!-- the content start -->
-                <div class="theContent">
                     <?php echo mnel_show_content_in_tag(); ?>
-                </div>
-
                 <!-- the content end -->
+
             </div>
             <!-- single left end -->
             <!-- singler right start -->

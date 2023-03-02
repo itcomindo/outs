@@ -1,29 +1,76 @@
 #topbar {
-    background-color: var(--colpal-11);
-    color: white;
-    height: 40px;
-    padding: 0;
+  background-color: black;
+  color: white;
+  height: 40px;
+  padding: 0;
 }
+#topbar:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--colpal-11) 0%,
+    var(--colpal-11-dark) 100%
+  );
+}
+
 #topbar .container {
-    height: 100%;
+  height: 100%;
 }
 .topbarWr {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .topbarCol {
-    display: flex;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 90%;
 }
 .topbarLeft,
 .topbarRight {
-    width: 15%;
+  width: calc(20% - 1px);
 }
 .topbarMid {
-    display: flex;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  border-left: 1px dashed rgba(255, 255, 255, 0.2);
+  border-right: 1px dashed rgba(255, 255, 255, 0.2);
+}
+.topbarRight {
+  justify-content: center;
+}
+.topbarRight a {
+  margin: 0 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .topbarLeft {
+    display: none;
+  }
+  .topbarMid {
+    justify-content: flex-start;
+  }
+  .topbarRight {
     justify-content: center;
-    flex: 1;
+    padding-left: 16px;
+    width: 25%;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+    .topbarRight {
+        display: none;
+    }
+    .topbarMid {
+        border-right: none;
+    }
 }

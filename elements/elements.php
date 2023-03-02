@@ -21,6 +21,8 @@ include get_template_directory() . '/elements/show-logo-perusahaan.php';
 include get_template_directory() . '/elements/show-user-cta.php';
 include get_template_directory() . '/elements/show-chatbox.php';
 include get_template_directory() . '/elements/custom-content-in-tag.php';
+include get_template_directory() . '/elements/show-custom-post-title.php';
+include get_template_directory() . '/elements/show-custom-tag-title.php';
 
 // next element will release soon
 /*

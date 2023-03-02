@@ -35,7 +35,6 @@ function load_mm_css()
     if (is_home()) {
         wp_enqueue_style('home-css', get_template_directory_uri() . '/css/home.css', array(), $version, 'all');
         wp_enqueue_style('home-media-css', get_template_directory_uri() . '/css/home-media.css', array('home-css'), $version, 'all');
-        wp_enqueue_style('adshome-css', get_template_directory_uri() . '/css/ads.css', array(), $version, 'all');
         // load flickity css from cdnjs
         wp_enqueue_style('flickity-css', 'https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css', array(), '2.2.2', 'all');
         // fallback flickity.css if CDN is not available
@@ -74,12 +73,13 @@ function load_mm_css()
     wp_enqueue_style('header-css', get_template_directory_uri() . '/css/header.css', array(), $version, 'all');
     wp_enqueue_style('header-menu-css', get_template_directory_uri() . '/css/header-menu.css', array(), $version, 'all');
     wp_enqueue_style('footer-css', get_template_directory_uri() . '/css/footer.css', array(), $version, 'all');
-
-
+    wp_enqueue_style('ads-css', get_template_directory_uri() . '/css/ads.css', array(), $version, 'all');
+    
+    
     // load global media css
     wp_enqueue_style('global-media-css', get_template_directory_uri() . '/css/global-media.css', array(), $version, 'all');
     wp_enqueue_style('darkmode', get_template_directory_uri() . '/css/darkmode.css', array(), 'v1.0', 'all');
-
+    
 }
 add_action('wp_enqueue_scripts', 'load_mm_css');
 

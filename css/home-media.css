@@ -29,6 +29,9 @@
 
 /* media screen max 480px */
 @media screen and (max-width: 480px) {
+  .qItem:before {
+    left: -25%;
+}
   .qItemWr {
     display: flex;
     flex-wrap: wrap;
@@ -77,6 +80,6 @@
     color: white;
   }
   .card-2-bot .globalQTitle {
-    font-size: clamp(0.5rem, 3vw, 0.8rem);
-  }
+    font-size: clamp(1.2rem, 3vw, 1.3rem);
+}
 }

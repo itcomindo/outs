@@ -24,3 +24,24 @@ add_filter('script_loader_tag', function ($tag, $handle) {
     return str_replace("type='text/javascript'", '', $tag);
 }, 10, 2);
 
+
+
+/**
+ * Function to filter: disable or remove revisions metabox in post and page edit screen
+*/
+function mn_remove_revisions_metabox()
+{
+    remove_meta_box('revisionsdiv', 'post', 'normal');
+    remove_meta_box('revisionsdiv', 'page', 'normal');
+}
+add_action('admin_menu', 'mn_remove_revisions_metabox');
+
+/**
+ * remove slug metabox
+*/
+function mn_remove_slug_metabox()
+{
+    remove_meta_box('slugdiv', 'post', 'normal');
+    remove_meta_box('slugdiv', 'page', 'normal');
+}
+add_action('admin_menu', 'mn_remove_slug_metabox');

@@ -14,6 +14,7 @@ function show_basic_query($postPerPage = 7, $sticky = false)
 ?>
     <section id="qOnePr" class="section globalSection">
         <div class="container">
+            <?php echo mnads_home_afer_header_menu(); ?>
             <div class="qOneWr">
                 <div class="qOneTOp"></div>
                 <div class="qOneBot qItemWr">
@@ -30,7 +31,8 @@ function show_basic_query($postPerPage = 7, $sticky = false)
                                 <div class="qItemTop card-<?php echo $count; ?>-top">
                                     <?php echo mnel_show_post_views('homePostView'); ?>
                                     <a title="<?php echo $title; ?>" href="<?php echo $permalink; ?>">
-                                        <?php //echo mnel_show_featured_image(); ?>
+                                        <?php //echo mnel_show_featured_image(); 
+                                        ?>
                                         <?php echo mncore_custom_featured_image(); ?>
                                     </a>
                                 </div>
@@ -75,7 +77,9 @@ function show_basic_query($postPerPage = 7, $sticky = false)
                     ?>
                 </div>
             </div>
+
         </div>
+
     </section>
 <?php
 }

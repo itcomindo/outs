@@ -56,12 +56,12 @@ function mnplugin_seo_fields()
 }
 
 
-function mnplug_seo()
+function mnplug_show_seo()
 {
     $blogTitle = get_bloginfo('name');
     $description = get_bloginfo('description');
     if (is_single()) {
-        $title = get_the_title();
+        $title = mnel_show_custom_post_title();
         $description = $title . ' ' . mncore_excerpt();
         $count = strlen($description);
         if ($count > 160) {
@@ -104,7 +104,14 @@ function mnplug_seo()
         $title = $blogTitle;
         $description = $description;
         $robots = 'index, follow';
-    } ?>
+    } elseif (is_page_template('template-parts/sitemap-page.php')) {
+        $title = 'Sitemap';
+        $description = $title . ' ' . get_bloginfo('description');
+        $robots = 'noindex, nofollow';
+    } else {
+        // wait for update
+    }
+    ?>
     <title><?php echo $title ?></title>
     <meta name="description" content="<?php echo $description; ?>">
     <meta name="robots" content="<?php echo $robots; ?>">

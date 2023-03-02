@@ -1,4 +1,6 @@
-
+.qOneWr {
+  margin-top: 2em;
+}
 
 .qItemWr {
   width: 100%;
@@ -112,7 +114,7 @@
   color: white;
 }
 .slideItem .qItemBot .globalQTitle {
-  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
 }
 .slideItem .qItemBot p {
   color: white;

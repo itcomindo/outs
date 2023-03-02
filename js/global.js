@@ -35,10 +35,32 @@ window.addEventListener('DOMContentLoaded', (event) => {
             jQuery(toggleClose).removeClass('inactive').addClass('active');
             jQuery(chatBoxLogo).addClass('animate__rotateIn').removeClass('animate__bounce');
         });
+
+        // off canvas menu
+        var toggleHeaderMenuWr = jQuery('#toggleHeaderMenuWr');
+        var headerMenuContainerWr = jQuery('#headerMenuContainerWr');
+        jQuery(toggleHeaderMenuWr).click(function () {
+            jQuery(headerMenuContainerWr).removeClass('slideUp').addClass('slideDown');
+           console.log('clicked'); 
+        });
+        
+        // close off canvas menu
+        jQuery('#headerMenuContainerWr').click(function () {
+            jQuery(this).removeClass('slideDown').addClass('slideUp');
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+// jquery end above this line
     });
-
-
-
-
 
 });

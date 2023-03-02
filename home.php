@@ -1,7 +1,7 @@
 <?php
 defined('ABSPATH') || exit;
 get_header();
-mnads_home_afer_header_menu();
+// mnads_home_afer_header_menu();
 show_basic_query(6);
 ?>
 <section class="section">

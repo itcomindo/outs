@@ -8,11 +8,11 @@ function mntp_header() {
             <div class="headerWr">
                 <div class="headerLeft headerCol">
                     <a title="<?php echo get_bloginfo('name') ?>" href="/">
-                        <h2>Logo</h2>
+                        <h2 class="mylogo">Outsourcing</h2>
                     </a>
                 </div>
                 <div class="headerRight headerCol">
-                    Banner ads
+                    <?php echo mnads_show_ads_in_header(); ?>
                 </div>
             </div>
         </div>

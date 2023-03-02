@@ -14,7 +14,7 @@ defined('ABSPATH') || exit;
     <link rel="shortcut icon" href="<?php echo $favicon; ?>" type="image/x-icon" />
     <meta name="google-site-verification" content="t0f4zeLk5-eCUVe-mmb-v6npo10aUcuiv8RyYsj9j-g" />
     <!-- SEO Plugin by Budiharyono.com -->
-    <?php echo mnplug_seo(); ?>
+    <?php echo mnplug_show_seo(); ?>
     
     
     <?php mn_google_site_verification(); ?>
