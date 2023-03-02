@@ -72,5 +72,6 @@
     }
     .topbarMid {
         border-right: none;
+        border-left: none;
     }
 }

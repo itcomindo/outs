@@ -26,11 +26,31 @@ function load_mm_js()
     if (is_home()) {
         // load flickity from cdn
         wp_enqueue_script('flickity-js', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array('jq'), '2.2.2', true);
+        
+        // load infinite scroll
+        wp_enqueue_script('infinite-js', 'https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js', array('jq'), '2.2.2', true);
+
+        
+        
+        
+        
         // if flickity is not available from CDN
         if (!wp_script_is('flickity-js', 'enqueued')) {
             // load flickity from folder libs
             wp_enqueue_script('flickity-js', get_template_directory_uri() . '/libs/flickity.pkgd.min.js', array('jq'), '2.2.2', true);
+
+            // load infinite scroll from folder libs
+            wp_enqueue_script('infinite-js', get_template_directory_uri() . '/libs/infinite-scroll.pkgd.min.js', array('jq'), '2.2.2', true);
         }
+
+
+
+
+
+
+
+
+
         // load home.js
         wp_enqueue_script('home-js', get_template_directory_uri() . '/js/home.js', array('flickity-js'), $version, true);
     } elseif (is_single() || is_tag()) {
