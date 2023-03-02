@@ -2,6 +2,7 @@
 defined('ABSPATH') || exit;
 ?>
 <!DOCTYPE html>
+
 <html lang="id-ID" class="no-js" itemscope itemtype="https://schema.org/WebPage">
 
 <head>
@@ -15,8 +16,7 @@ defined('ABSPATH') || exit;
     <meta name="google-site-verification" content="t0f4zeLk5-eCUVe-mmb-v6npo10aUcuiv8RyYsj9j-g" />
     <!-- SEO Plugin by Budiharyono.com -->
     <?php echo mnplug_show_seo(); ?>
-    
-    
+
     <?php mn_google_site_verification(); ?>
     <?php mn_bing_site_verification(); ?>
     <?php echo mnoption_facebook_api(); ?>

@@ -107,30 +107,3 @@ include get_template_directory() . '/security/security.php';
 // include plugins
 include get_template_directory() . '/plugins/plugins.php';
 
-function mass_change_post_category() {
-    $target = 'mano';
-    $newCat = 'Papua Barat';
-    $oldCat = 'PT. Fajarmerah Group';
-
-    $posts = get_posts(array(
-        'category_name' => $oldCat,
-        's' => $target
-    ));
-    foreach ($posts as $post) {
-        wp_set_post_categories($post->ID, $newCat);
-    }
-
-    
-    $oldCatB = 'PT. Garda Total Securindo';
-
-    $posts = get_posts(array(
-        'category_name' => $oldCatB,
-        's' => $target
-    ));
-    foreach ($posts as $post) {
-        wp_set_post_categories($post->ID, $newCat);
-    }
-
-}
-
-// add_action('init', 'mass_change_post_category');

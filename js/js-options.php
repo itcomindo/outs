@@ -33,6 +33,9 @@ function load_mm_js()
         }
         // load home.js
         wp_enqueue_script('home-js', get_template_directory_uri() . '/js/home.js', array('flickity-js'), $version, true);
+    } elseif (is_single() || is_tag()) {
+        //!wait to fixed in live
+        // wp_enqueue_script('single-js', get_template_directory_uri() . '/js/single.js', array('jq'), $version, true);
     }
 
 }

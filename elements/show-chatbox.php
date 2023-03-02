@@ -33,8 +33,8 @@ function mnel_show_chatbox()
                         </span>
                     </div>
                     <div class="staffRight">
-                        <a title="chat whatsapp" rel="noopener, nofollow" target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo mnel_show_user_wacall('linknumber'); ?>&text=<?php echo mncore_wa_message(); ?>"><img src="<?php echo get_template_directory_uri() . '/images/whatsapp.svg' ?>">Whatsapp</a>
-                        <a title="telepon" rel="noopener, nofollow" target="_blank" href="tel:+<?php echo mnel_show_user_wacall('linknumber') ?>"><img src="<?php echo get_template_directory_uri() . '/images/call.svg' ?>">Telepon</a>
+                        <a title="chat whatsapp" rel="noopener, nofollow" target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo mnel_show_user_wacall('linknumber'); ?>&text=<?php echo mncore_wa_message(); ?>"><img alt="chat whatsapp customer service" src="<?php echo get_template_directory_uri() . '/images/whatsapp.svg' ?>">Whatsapp</a>
+                        <a title="telepon" rel="noopener, nofollow" target="_blank" href="tel:+<?php echo mnel_show_user_wacall('linknumber') ?>"><img alt="telepon customer service" src="<?php echo get_template_directory_uri() . '/images/call.svg' ?>">Telepon</a>
                     </div>
                 </div>
             </div>

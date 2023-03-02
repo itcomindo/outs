@@ -42,7 +42,7 @@ function mnuser_show_logo_perusahaan($link, $class = 'globalLogoPerusahaan', $wi
             $authorID = get_post_field('post_author', $postID);
             $namaPerusahaan = carbon_get_user_meta($authorID, 'nama_perusahaan_user');
             $urlLogo = carbon_get_user_meta($authorID, 'logo_image_user');
-            $logo = '<img class="' . $class . '" src="' . $urlLogo . '" title="' . $namaPerusahaan . '" alt="' . $namaPerusahaan . '" title="' . $namaPerusahaan . '" width="' . $width . '">';
+            $logo = '<img class="' . $class . '" src="' . $urlLogo . '" alt="' . $namaPerusahaan . '" title="' . $namaPerusahaan . '" width="' . $width . '">';
             return $logo;
         }
     }

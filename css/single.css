@@ -108,7 +108,30 @@
 }
 
 .theContent {
+  width: 100%;
+  max-width: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.inlineAdsPr {
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 4px;
+}
+.inlineAdsWr {
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 4px;
+}
+.theContent p {
+  margin-bottom: 4pxpx;
 }
 .theContent h2 {
   font-size: clamp(1.1rem, 3vw, 1.7rem);

@@ -60,8 +60,16 @@ function mnplug_show_seo()
 {
     $blogTitle = get_bloginfo('name');
     $description = get_bloginfo('description');
-    if (is_single()) {
+    if (is_single() && ! has_category('journal')) {
         $title = mnel_show_custom_post_title();
+        $description = $title . ' ' . mncore_excerpt();
+        $count = strlen($description);
+        if ($count > 160) {
+            $description = substr($description, 0, 160);
+        }
+        $robots = 'index, follow';
+    } elseif (is_single() && has_category('journal')) {
+        $title = get_the_title();
         $description = $title . ' ' . mncore_excerpt();
         $count = strlen($description);
         if ($count > 160) {

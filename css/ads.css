@@ -117,12 +117,14 @@
 }
 .adsAfterContentWr {
     display: flex;
+    justify-content: space-between;
+    gap: 4px;
 }
 
 .adsAfterContentCol {
     display: flex;
     flex-direction: column;
-    flex: 2;
+    flex: 1;
     padding: 16px;
     background-color: black;
     color: white;

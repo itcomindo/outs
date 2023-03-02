@@ -198,6 +198,43 @@ function mn_theme_options()
             // ads footer
             Field::make('textarea', 'ads_footer_mn', 'Ads Footer')
                 ->set_help_text('masukan kode adsense untuk menampilkan di footer'),
+
+            // ads inline article shortcode
+            // checkbox enable disable ads inline article
+            Field::make('checkbox', 'enable_ads_inline_shortcode_in_article_option', 'Enable/Disable Ads Inline Article')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk mengaktifkan ads inline article'),
+
+            // ads client id
+            Field::make('text', 'ads_client_id_mn', 'Ads Client ID')
+                ->set_help_text('masukan nomor ads client id contoh: 7273106919945417 tanpa <span class="redbold">ca-pub-</span>')
+                ->set_attribute('type', 'number')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'enable_ads_inline_shortcode_in_article_option',
+                        'value' => true,
+                    ]
+                ]),
+
+            // ads slot id
+            Field::make('text', 'ads_slot_id_mn', 'Ads Slot ID')
+                ->set_help_text('masukan kode ads slot id, contoh: 8098045974')
+                ->set_attribute('type', 'number')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'enable_ads_inline_shortcode_in_article_option',
+                        'value' => true,
+                    ]
+                ]),
+
+
+
+
+
+
+
+
+
         ]);
     // FOOTER OPTIONS
     Container::make('theme_options', 'Footer Options')
@@ -226,7 +263,7 @@ function mn_theme_options()
                 ->set_option_value('yes')
                 ->set_help_text('pilih untuk mengaktifkan auto alt and title image in post, Fungsi: jika seorang user upload gambar maka secara otomatis akan di tambahkan alt dan title gambar tersebut'),
 
-                // remove website field from comment form
+            // remove website field from comment form
             Field::make('checkbox', 'remove_website_field_from_comment_form_mn', 'Remove Website Field From Comment Form')
                 ->set_option_value('yes')
                 ->set_help_text('pilih untuk menghapus website field dari comment form'),
