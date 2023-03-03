@@ -30,7 +30,7 @@ function mnqu_show_sticky_post_query($postPerPage = 3)
                     </div>
                     <?php echo mnel_show_post_views('homePostView'); ?>
                     <a title="<?php echo $title; ?>" href="<?php echo $permalink; ?>">
-                        <?php echo mncore_custom_featured_image(); ?>
+                        <?php echo mncore_custom_featured_image(true); ?>
                     </a>
                 </div>
                 <div class="qItemBot">

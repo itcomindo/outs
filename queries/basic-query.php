@@ -33,7 +33,7 @@ function show_basic_query($postPerPage = 7, $sticky = false)
                                     <a title="<?php echo $title; ?>" href="<?php echo $permalink; ?>">
                                         <?php //echo mnel_show_featured_image(); 
                                         ?>
-                                        <?php echo mncore_custom_featured_image(); ?>
+                                        <?php echo mncore_custom_featured_image(true); ?>
                                     </a>
                                 </div>
                                 <div class="qItemBot card-<?php echo $count; ?>-bot">

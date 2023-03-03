@@ -1,9 +1,10 @@
 <?php
 defined('ABSPATH') || exit;
 
-function mnplugin_show_single_post_schema()
+
+function mnplugin_show_tag_post_schema()
 {
-    $title = mnel_show_custom_post_title();
+    $title = single_tag_title('', false);
     $alamat = mncore_show_alamat_local_business();
     $district = do_shortcode('[distrik]');
     if (empty($district)) {
@@ -13,11 +14,15 @@ function mnplugin_show_single_post_schema()
         $districtKota = $district . ' ' . $kota;
     }
     $email = mncore_show_author_email();
-    $provinsi = get_cat_name(mncore_catID());
+    $provinsi = do_shortcode('[provinsi]');
     $kodepos = mncore_local_business_kodepos();
     $logo = mnuser_show_logo_perusahaan_url_only();
     $image = mncore_custom_featured_image(false);
     $phone = mncore_show_user_phone();
+    // get tag permalink
+    $tag = get_queried_object();
+    $tag_link = get_tag_link($tag->term_id);
+
 ?>
     <script type="application/ld+json">
         {
@@ -39,7 +44,7 @@ function mnplugin_show_single_post_schema()
             ],
             "email": "<?php echo mncore_show_author_email(); ?>",
             "telePhone": "<?php echo $phone; ?>",
-            "url": "<?php echo get_the_permalink(); ?>",
+            "url": "<?php echo $tag_link; ?>",
             "paymentAccepted": ["cash", "check"],
             "openingHours": "Mo,Tu,We,Th,Fr 07:00-19:00",
             "openingHoursSpecification": [{
@@ -61,4 +66,4 @@ function mnplugin_show_single_post_schema()
 }
 
 
-add_action('wp_head', 'mnplugin_show_single_post_schema', 1);
+add_action('wp_head', 'mnplugin_show_tag_post_schema', 1);

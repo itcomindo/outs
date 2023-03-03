@@ -6,8 +6,9 @@ function mnshortcode_show_provinsi() {
         $catName = get_cat_name(mncore_catID());
         return $catName;
     } elseif (is_tag()) {
-        $catName = 'wait';
-        return $catName;
+        $postID = mncore_get_post_id_in_tag();
+        $catID = get_the_category($postID);
+        return $catID[0]->name;
     }
 }
 
