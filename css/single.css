@@ -24,6 +24,11 @@
   object-position: center;
   aspect-ratio: 16/9;
 }
+.unsplashAuthor {
+    z-index: 2;
+    font-size: 80%;
+    margin-left: 8px;
+}
 .singlePostTitleWr,
 .singleMetaWr,
 .theContent,

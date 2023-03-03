@@ -9,13 +9,17 @@ get_header();
             <!-- single left start -->
             <div class="singleLeft singleCol">
                 <div class="singleFeaturedImageWr">
-                    <div class="singlePostViewsWr">
-                        <?php echo mnel_show_post_views(); ?>
-                    </div>
-                    <?php echo mncore_custom_featured_image(); ?>
+                    <?php echo mnel_show_post_views('singlePostViewsWr'); ?>
+                    <?php echo mncore_custom_featured_image(true); ?>
                 </div>
+                <?php
+                echo mnel_show_unsplash_author($isJournal, 'unsplashAuthor');
+                ?>
                 <div class="singlePostTitleWr">
-                    <h1 class="globalPostTitle"><?php echo mnel_show_custom_post_title(); ?></h1>
+                    <h1 class="globalPostTitle">
+                        <?php echo mnel_show_custom_post_title(); ?>
+                    </h1>
+
                 </div>
                 <div class="singleMetaWr">
                     <div class="singleAuthorWr">
@@ -36,8 +40,6 @@ get_header();
                     <?php echo mnel_show_post_category(); ?>
                 </div>
                 <?php
-
-
                 // echo mnel_show_comments_count();
                 ?>
                 <!-- the content start -->
@@ -48,14 +50,20 @@ get_header();
                     <?php echo mnel_show_post_tags(); ?>
                 </div>
                 <?php echo mnads_show_ads_after_content(); ?>
+                
+                <?php
+                /*
+                if (!mncore_is_journal()) {
+                    echo mnplugin_show_single_post_schema();
+                }
+                */
+                ?>
                 <div class="singleCommentFormWr">
                     <?php
                     if (comments_open() || get_comments_number()) {
                     ?>
                         <div id="globalCommentWr" class="active">
-                            <?php //comments_template(); 
-                            ?>
-
+                            <?php //comments_template(); ?>
                         </div>
                     <?php
                     }

@@ -1,6 +1,24 @@
 <?php
 defined('ABSPATH') || exit;
 
+
+function mnuser_show_logo_perusahaan_url_only() {
+    if (is_single()) {
+        $authorID = get_post_field('post_author', mncore_postID());
+        $urlLogo = carbon_get_user_meta($authorID, 'logo_image_user');
+        return $urlLogo;
+
+    } elseif (is_tag()) {
+        $postID = mncore_get_post_id_in_tag();
+        $authorID = get_post_field('post_author', $postID);
+        $urlLogo = carbon_get_user_meta($authorID, 'logo_image_user');
+        return $urlLogo;
+    }
+
+}
+
+
+
 /**
  * show logo
  * @param $link boolean
