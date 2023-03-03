@@ -121,6 +121,7 @@ header .container {
     -moz-transition: 0.3s linear all;
     -ms-transition: 0.3s linear all;
     -o-transition: 0.3s linear all;
+    z-index: 99999999;
   }
   #headerMenu.vertical #header-menu__list {
     display: flex;

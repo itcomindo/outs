@@ -16,20 +16,24 @@ function mntp_footer()
                 <h2 class="globalSectionHead">
                     outsourcing.web.id
                 </h2>
+                <p>Jl. Mujahidin 1 No.112 RT02/08 Kreo Selatan, Kota Tangerang, Banten 15156</p>
+                <p>0813-9891-2341</p>
             </div>
             <div id="fooMid" class="foRow">
                 <!-- footer Left -->
                 <div class="fooMidLeft fooCol">
                     <div class="fooHeadWr">
-                        <h3>Footer Left</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque temporibus deleniti error nam dolores aut ullam, molestiae harum ex sed facere natus animi, maxime aperiam a omnis doloribus veritatis magni?</p>
+                        <h3>About</h3>
+                        <p>Outsourcing.web.id merupakan blog yang memberikan informasi seputar bisnis outsourcing di Indonesia.</p>
+                        <p>Kritik, saran dan keluhan dapat anda berikan melalui email outsourcing.web.id pada halaman <a class="linkUnderline" title="contact" href="/contact/">Contact</a>.</p>
                     </div>
                 </div>
                 <!-- footer midle -->
                 <div class="fooMidMid fooCol">
                     <div class="fooHeadWr">
-                        <h3>Footer Mid</h3>
+                        <h3>Menu</h3>
                     </div>
+                    <?php echo mnmenu_show_footer_menu(); ?>
                 </div>
                 <!-- footer right -->
                 <div class="fooMidRight fooCol">

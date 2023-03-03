@@ -5,6 +5,7 @@ function load_mm_css()
 {
     // load local css Version
     $version = wp_get_theme()->get('Version');
+    wp_enqueue_style('menu-nav-css', get_template_directory_uri() . '/css/menus.css', array(), '', 'all');
 
     // Load normalize.css
     wp_enqueue_style('normalize', 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css', array(), '8.0.1', 'all');
@@ -21,7 +22,8 @@ function load_mm_css()
     }
 
     // enqueue fontawesome from cdnjs
-    wp_enqueue_style('fontawesome-css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css', array(), '6.2.0', 'all');
+    wp_enqueue_style('fontawesome-css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css', array(), '6.3.0', 'all');
+
     // fallback fontawesome.css if CDN is not available
     if (!wp_style_is('fontawesome-css', 'enqueued')) {
         wp_enqueue_style('fontawesome-css', get_template_directory_uri() . '/libs/all.min.css', array(), '6.2.0', 'all');
@@ -75,6 +77,7 @@ function load_mm_css()
     wp_enqueue_style('header-menu-css', get_template_directory_uri() . '/css/header-menu.css', array(), $version, 'all');
     wp_enqueue_style('footer-css', get_template_directory_uri() . '/css/footer.css', array(), $version, 'all');
     wp_enqueue_style('ads-css', get_template_directory_uri() . '/css/ads.css', array(), $version, 'all');
+    wp_enqueue_style('cta-floating', get_template_directory_uri() . '/css/cta-floating.css', array(), $version, 'all');
     
     
     // load global media css

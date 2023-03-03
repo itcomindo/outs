@@ -1,0 +1,16 @@
+#footerMenu {
+    width: 100%;
+}
+#footer-menu__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+#footer-menu__list li {
+    padding-bottom: 3px;
+    width: 100%;
+    border-bottom: 1px dashed rgba(255,255,255,0.2);
+    margin-bottom: 6px;
+}

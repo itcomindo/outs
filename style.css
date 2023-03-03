@@ -97,7 +97,7 @@ ul,
 ol {
   padding-left: 2em;
 }
-.no-scroll {
+.noScroll {
   overflow: hidden;
   max-height: 100vh;
 }
@@ -137,6 +137,9 @@ li {
 }
 
 /* globalClasses */
+.linkUnderline {
+  text-decoration: underline;
+}
 .mylogo {
   font-size: clamp(1.1rem, 5vw, 2rem);
   text-transform: uppercase;

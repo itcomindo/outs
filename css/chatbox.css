@@ -133,10 +133,10 @@
     background-color: var(--colpal-6);
     color: white;
     border-radius: 10px 10px 0 0;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
     position: relative;
 }
 .cbTopLeft {
@@ -236,6 +236,16 @@
     margin: 0 auto;
 }
 
+
+
+
+
+
+@media screen and (max-width: 360px) {
+    #cb.active {
+        display: none !important;
+    }
+}
 @media screen and (max-width: 320px) {
     #cb.active {
         right: 0;

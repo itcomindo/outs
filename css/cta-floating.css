@@ -1,0 +1,142 @@
+.mobFloPr {
+  width: 300px;
+  position: fixed;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border: 1px solid white;
+  z-index: 999;
+  color: white;
+}
+#toggleCloseShare {
+  position: absolute;
+  top: -27px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.mobFloWr {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  margin: 2px;
+  border-radius: 13px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  -o-border-radius: 13px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#mobFloCtaWr {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#mobFloShareItemWr {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#mobFloCtaWr div a i,
+#mobFloShareItemWr a i {
+  font-size: 24px;
+}
+
+#mobFloShareItemWr a {
+  width: calc(100% / 3 - 2px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#mobFloCtaWr div {
+  height: 34px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 4 - 2px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#mobFloCtaWr div:first-child,
+#mobFloShareItemWr a:first-child {
+  border-radius: 15px 0 0 15px;
+  -webkit-border-radius: 15px 0 0 15px;
+  -moz-border-radius: 15px 0 0 15px;
+  -ms-border-radius: 15px 0 0 15px;
+  -o-border-radius: 15px 0 0 15px;
+}
+#mobFloCtaWr div:last-child,
+#mobFloShareItemWr a:last-child {
+  border-radius: 0 15px 15px 0;
+  -webkit-border-radius: 0 15px 15px 0;
+  -moz-border-radius: 0 15px 15px 0;
+  -ms-border-radius: 0 15px 15px 0;
+  -o-border-radius: 0 15px 15px 0;
+}
+
+#toggleOpenShare {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatapp i {
+  color: green;
+}
+.phone i {
+  color: #ea4335;
+}
+
+.web i {
+  color: darkblue;
+}
+.facebook i {
+  color: #3b5998;
+}
+.twitter i {
+  color: #1da1f2;
+}
+.linkedin i {
+  color: #0077b5;
+}
+
+
+@media screen and (min-width: 361px) {
+    .mobFloPr {
+        display: none;
+    }
+}

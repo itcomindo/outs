@@ -13,7 +13,7 @@ include get_template_directory() . '/cores/author-role.php';
 include get_template_directory() . '/cores/post-type.php';
 include get_template_directory() . '/cores/wa-message.php';
 include get_template_directory() . '/cores/post-id-in-tag.php';
-include get_template_directory() . '/cores/local-business-kodepos.php';
+include get_template_directory() . '/cores/author-kodepos.php';
 include get_template_directory() . '/cores/alamat-local-business.php';
 include get_template_directory() . '/cores/author-email.php';
 include get_template_directory() . '/cores/author-phone.php';

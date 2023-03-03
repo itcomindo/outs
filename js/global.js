@@ -41,12 +41,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
         var headerMenuContainerWr = jQuery('#headerMenuContainerWr');
         jQuery(toggleHeaderMenuWr).click(function () {
             jQuery(headerMenuContainerWr).removeClass('slideUp').addClass('slideDown');
-           console.log('clicked'); 
+            jQuery('body').addClass('noScroll');
         });
         
         // close off canvas menu
         jQuery('#headerMenuContainerWr').click(function () {
             jQuery(this).removeClass('slideDown').addClass('slideUp');
+            jQuery('body').removeClass('noScroll');
         });
 
 

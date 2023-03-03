@@ -95,5 +95,8 @@ get_header();
 <?php
 if (!has_category('journal')) {
     echo mnel_show_chatbox();
+    echo mnel_show_mobile_floating_buttons();
+} else {
+    echo mnel_show_mobile_floating_buttons();
 }
 get_footer();

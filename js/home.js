@@ -31,12 +31,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         // infinite scroll iniitialize
 
-        jQuery('.homeContColPostsWr').infiniteScroll({
-                // options
-                path: '.globalPaged a.next',
-                append: '.homeContColPostItem',
-                history: true,
-            });
+        // jQuery('.homeContColPostsWr').infiniteScroll({
+        //         // options
+        //         path: '.globalPaged a.next',
+        //         append: '.homeContColPostItem',
+        //         history: true,
+        //     });
             
 
 

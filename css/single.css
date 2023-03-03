@@ -119,6 +119,35 @@
   display: flex;
   flex-direction: column;
 }
+.theContent .wr_promo_in_content div {
+  width: 100%;
+}
+.theContent .wr_promo_in_content div img {
+  width: 100%;
+  height: auto;
+}
+.btn_in_content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn_in_content a {
+  width: 100%;
+  padding: 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--colpal-11);
+  color: white;
+  font-size: 80%;
+  text-decoration: none;
+}
+.theContent .wp-caption.alignnone {
+  width: 100% !important;
+}
+
+
 .inlineAdsPr {
   min-width: 100%;
   width: 100%;

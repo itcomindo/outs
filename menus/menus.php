@@ -56,3 +56,15 @@ function register_footer_menu() {
     register_nav_menu('footer-menu', 'Footer Menu');
 }
 add_action( 'init', 'register_footer_menu' );
+// create footer menu vertical menu
+function mnmenu_show_footer_menu() {
+    wp_nav_menu( array(
+        'theme_location' => 'footer-menu',
+        'container' => 'nav',
+        'container_id' => 'footerMenu',
+        'container_class' => 'vertical',
+        'menu_id' => 'footer-menu__list',
+        'menu_class' => 'verticalMenus',
+        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+    ) );
+}

@@ -24,6 +24,22 @@ include get_template_directory() . '/elements/custom-content-in-tag.php';
 include get_template_directory() . '/elements/show-custom-post-title.php';
 include get_template_directory() . '/elements/show-custom-tag-title.php';
 
+function mnel_conditional_element_loader() {
+    if (is_single() && ! has_category('journal')) {
+        include get_template_directory() . '/elements/show-mobile-floating-buttons.php';
+        include get_template_directory() . '/elements/show-mobile-floating-cta.php';
+        include get_template_directory() . '/elements/show-mobile-floating-share.php';
+        
+    } elseif (is_single() && has_category('journal')) {
+        include get_template_directory() . '/elements/show-mobile-floating-buttons.php';
+        include get_template_directory() . '/elements/show-mobile-floating-share.php';
+    }
+}
+
+add_action('wp', 'mnel_conditional_element_loader');
+
+
+
 // next element will release soon
 /*
 include get_template_directory() . '/elements/show-chatbox.php';
