@@ -31,8 +31,6 @@ function show_basic_query($postPerPage = 7, $sticky = false)
                                 <div class="qItemTop card-<?php echo $count; ?>-top">
                                     <?php echo mnel_show_post_views('homePostView'); ?>
                                     <a title="<?php echo $title; ?>" href="<?php echo $permalink; ?>">
-                                        <?php //echo mnel_show_featured_image(); 
-                                        ?>
                                         <?php echo mncore_custom_featured_image(true); ?>
                                     </a>
                                 </div>
@@ -48,15 +46,7 @@ function show_basic_query($postPerPage = 7, $sticky = false)
                                     <div class="qItemExcerptWr">
                                         <?php echo mnel_show_post_excerpt(60); ?>
                                     </div>
-                                    <?php // echo mnel_show_comments_count(); 
-                                    ?>
                                     <?php echo mnel_show_readmore_button(); ?>
-                                    <?php // echo mnel_show_post_author(true); 
-                                    ?>
-                                    <?php // echo mnel_show_post_tags(); 
-                                    ?>
-                                    <?php // echo mnel_show_post_category(); 
-                                    ?>
                                 </div>
                             </div>
                     <?php

@@ -1,0 +1,84 @@
+.tagCard-1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+.tagCard-1-top {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.tagCard-1-top:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+  z-index: 1;
+}
+
+.tagCard-1-top a .globalPostFeaturedImage {
+  height: 100%;
+  width: auto;
+}
+.tagCard-1-bot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+.tagCard-1-bot .qItemDate {
+  font-size: 1.2rem;
+}
+
+.tagCard-1-bot .globalQTitle {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: normal;
+  line-height: 1.4;
+  margin: 16px 0;
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+@media screen and (max-width: 599px) {
+  .tagCardWr {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tagCard-1-top .homePostView {
+    font-size: 100%;
+  }
+  .tagCard-1-bot .globalReadmoreBtn {
+    font-size: 1.1rem !important;
+  }
+  .tagCard-1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    height: 25em;
+  }
+}
+
+
+@media screen and (max-width: 359px) {
+    .tagCardWr {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .qItem {
+        margin-bottom: 16px;
+    }
+}
