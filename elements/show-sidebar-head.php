@@ -12,6 +12,8 @@ function mnel_show_sidebar_head($class = "globalSidebarHeadWr", $title = "Sideba
 {
 ?>
     <div class="<?php echo $class .' ' . $position ; ?>">
+    <span class="shadowLeft"></span>
+    <span class="shadowRight"></span>
         <h3 class="globalSidebarHead">
             <?php echo $title; ?>
         </h3>

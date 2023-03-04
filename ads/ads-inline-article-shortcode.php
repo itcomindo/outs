@@ -21,8 +21,13 @@ function mnads_get_shortcode_ads_inline_in_aricle()
 {
      $adsInArticle = get_option_ads_inline_in_article();
      if ($adsInArticle == true) {
-          $clientID = carbon_get_theme_option('ads_client_id_mn');
+          $clientID = mnads_get_google_ca_pub();
           $slotID = carbon_get_theme_option('ads_slot_id_mn');
+          if (empty($slotID)) {
+               $slotID = '2647983172';
+          } else {
+               $slotID = $slotID;
+          }
 
           $script = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-' . $clientID . '"
      crossorigin="anonymous"></script>

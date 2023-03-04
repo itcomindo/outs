@@ -209,20 +209,9 @@ function mn_theme_options()
                 ->set_option_value('yes')
                 ->set_help_text('pilih untuk mengaktifkan ads inline article'),
 
-            // ads client id
-            Field::make('text', 'ads_client_id_mn', 'Ads Client ID')
-                ->set_help_text('masukan nomor ads client id contoh: 7273106919945417 tanpa <span class="redbold">ca-pub-</span>')
-                ->set_attribute('type', 'number')
-                ->set_conditional_logic([
-                    [
-                        'field' => 'enable_ads_inline_shortcode_in_article_option',
-                        'value' => true,
-                    ]
-                ]),
-
             // ads slot id
             Field::make('text', 'ads_slot_id_mn', 'Ads Slot ID')
-                ->set_help_text('masukan kode ads slot id, contoh: 8098045974')
+                ->set_help_text('<span class="redbold">NOTE: PASTIKAN SUDAH INPUT CODE ca-pub-727xxxxx</span> diatas terlebih dahulu sebelum memasukan ad-slot, isi ad-slot dibawah ketikan hanya angka misal: 3029550843, Cara menggunakannya cukup ketikan shortcode [ads] didalam artikel Anda.')
                 ->set_attribute('type', 'number')
                 ->set_conditional_logic([
                     [

@@ -145,12 +145,14 @@
 
 .inlineAdsPr {
   min-width: 100%;
-  width: 100%;
+  width: 664px;
   max-width: 100%;
   overflow: hidden;
   margin-top: 8px;
   margin-bottom: 8px;
   padding: 4px;
+  height: 98px;
+  max-height: 98px;
 }
 .inlineAdsWr {
   min-width: 100%;
@@ -158,6 +160,7 @@
   max-width: 100%;
   overflow: hidden;
   padding: 4px;
+  height: 100%;
 }
 .theContent p {
   margin-bottom: 4pxpx;
@@ -222,6 +225,14 @@
   .singleRight {
     width: 100%;
     flex: unset;
+  }
+  .singleRight {
+    margin-top: 16px;
+  }
+  
+  .globalSidebarHeadWr.right .shadowRight,
+  .globalSidebarHeadWr.right .shadowLeft {
+    display: none !important;
   }
 }
 
