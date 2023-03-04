@@ -228,6 +228,33 @@ function mn_theme_options()
                 ]),
 
 
+            // ads after content, there 2 columns left and right
+            // checkbox enable disable ads after content
+            Field::make('checkbox', 'enable_ads_after_content_option', 'Enable/Disable Ads After Content')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk mengaktifkan ads after content'),
+            
+            // ads after content left
+            Field::make('textarea', 'ads_after_content_left_mn', 'Ads After Content Left')
+                ->set_help_text('masukan kode adsense untuk menampilkan di setelah konten artikel, sebelah kiri')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'enable_ads_after_content_option',
+                        'value' => true,
+                    ]
+                ]),
+
+            // ads after content right
+            Field::make('textarea', 'ads_after_content_right_mn', 'Ads After Content Right')
+                ->set_help_text('masukan kode adsense untuk menampilkan di setelah konten artikel, sebelah kanan')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'enable_ads_after_content_option',
+                        'value' => true,
+                    ]
+                ]),
+
+
 
 
 

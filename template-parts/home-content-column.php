@@ -29,7 +29,7 @@ function mntp_show_home_content_column()
                 <div class="homeContRight homeContCol">
                     <aside class="globalAsideWr">
                         <div class="globalSidebar">
-                            <?php echo mnel_show_sidebar_head('globalSidebarHeadWr', 'Popular Posts'); ?>
+                            <?php echo mnel_show_sidebar_head('globalSidebarHeadWr', 'Popular Posts', 'right'); ?>
                         </div>
                     </aside>
                 </div>

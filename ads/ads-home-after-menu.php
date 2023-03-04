@@ -19,13 +19,13 @@ function mnads_home_afer_header_menu()
             <div class="adsHAMRight">
                 <?php echo mnel_show_five_stars(); ?>
                 <h3 class="globalHighlight">
-                    PT. Kalang Kabut Permanent
+                    PT. Fajarmerah Indo Service
                 </h3>
                 <small>Perusahaan outsourcing satpam resmi, legal & terbaik Penyalur: security, personal bodyguard, SPG, Office Boy, Cleaning Service dll keseluruh Indonesia.</small>
                 <span>
-                    <?php echo mnel_show_phone_icon_old(); ?> <small class="adsHAMphone">Phone: 0813-4567-8900.</small>
+                    <?php echo mnel_show_phone_icon_old(); ?> <small class="adsHAMphone">Phone: 0822-1014-0182.</small>
                 </span>
-                <a title="Visit Website" href="#">Visit Website</a>
+                <a rel="noopener, nofollow" target="_blank" title="PT. FMG" href="//fajarmerahgroup.com/contact-us/">Visit Website</a>
             </div>
         </div>
     </div>

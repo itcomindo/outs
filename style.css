@@ -137,6 +137,76 @@ li {
 }
 
 /* globalClasses */
+.globalSidebarHeadWr {
+  padding: 4px 8px;
+  background-color: var(--colpal-1);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.globalSidebarHeadWr.left:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -4px;
+  width: 6px;
+  height: 100%;
+  background-color: var(--colpal-1);
+  z-index: 1;
+}
+.globalSidebarHeadWr.left:after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: -12px;
+  width: 4px;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-right: 4px solid black;
+  border-bottom: 4px solid transparent;
+}
+
+.globalSidebarHeadWr.right:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -4px;
+  width: 6px;
+  height: 100%;
+  background-color: var(--colpal-1);
+  z-index: 1;
+}
+
+.globalSidebarHeadWr.right:after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  right: -12px;
+  width: 4px;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-left: 4px solid black;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+
+
+
+
+
+
+.globalSidebarHead {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.3;
+  margin: 4px 0 4px 6px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: left;
+}
 .linkUnderline {
   text-decoration: underline;
 }

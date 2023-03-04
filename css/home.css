@@ -265,33 +265,18 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Home Content Column */
 .homeContColWr {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  overflow: hidden;
   column-gap: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  overflow: hidden;
 }
 .homeContCol {
-  padding: 1.5em 8px;
+  padding: 1.5em 0;
 }
 .homeContLeft {
   width: 25%;
@@ -351,8 +336,9 @@
   overflow: hidden;
 }
 .homeContColPostItemLeft a .globalPostFeaturedImage {
-  width: 100px;
-  height: 100%;
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
 }
 .homeContColPostItemLeft a .globalPostFeaturedImage img {
   width: 100%;
@@ -362,7 +348,7 @@
 }
 
 .homeContColPostItemRight {
-  padding: 4px;
+  padding: 4px 8px;
   display: flex;
   flex-direction: column;
 }
@@ -378,7 +364,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 .homeTagWr {
