@@ -194,8 +194,8 @@ function mn_theme_options()
         ->set_page_parent($theme_options)
         ->add_fields([
             // google adsense code verification
-            Field::make('text', 'google_adsense_code_verification_mn', 'Google Adsense Code Verification')
-                ->set_help_text('masukan kode verifikasi google adsense'),
+            Field::make('text', 'google_adsense_code_verification_mn', 'Google Adsense CA Pub')
+                ->set_help_text('masukan Google Adsense contoh: ca-pub-7273106919945417'),
             // ads header
             Field::make('textarea', 'ads_header_mn', 'Ads Header')
                 ->set_help_text('masukan kode adsense untuk menampilkan di header'),
@@ -234,14 +234,14 @@ function mn_theme_options()
 
             // ads after content, there 2 columns left and right
             // checkbox enable disable ads after content
-            Field::make('checkbox', 'enable_ads_after_content_option', 'Enable/Disable Ads After Content')
+            Field::make('checkbox', 'enable_ads_after_content_option', 'Enable/Disable Google Adsense After Content')
                 ->set_option_value('yes')
                 ->set_help_text('pilih untuk mengaktifkan ads after content'),
 
             // ads after content left
-            Field::make('textarea', 'ads_after_content_left_mn', 'Ads After Content Left')
-                ->set_required(true)
-                ->set_help_text('masukan kode adsense untuk menampilkan di setelah konten artikel, sebelah kiri')
+            Field::make('text', 'ads_after_content_left_mn', 'Ads Slot After Content Left/Top Side')
+                ->set_help_text('<span class="redbold">NOTE: PASTIKAN SUDAH INPUT CODE ca-pub-727xxxxx</span> diatas terlebih dahulu sebelum memasukan ad-slot, isi ad-slot dibawah ketikan hanya angka misal: 3029550843')
+                ->set_attribute('type', 'number')
                 ->set_conditional_logic([
                     [
                         'field' => 'enable_ads_after_content_option',
@@ -250,9 +250,9 @@ function mn_theme_options()
                 ]),
 
             // ads after content right
-            Field::make('textarea', 'ads_after_content_right_mn', 'Ads After Content Right')
-                ->set_required(true)
-                ->set_help_text('masukan kode adsense untuk menampilkan di setelah konten artikel, sebelah kanan')
+            Field::make('text', 'ads_after_content_right_mn', 'Ads After Content Right/Top')
+                ->set_help_text('<span class="redbold">NOTE: PASTIKAN SUDAH INPUT CODE ca-pub-727xxxxx</span> diatas terlebih dahulu sebelum memasukan ad-slot, isi ad-slot dibawah ketikan hanya angka misal: 3029550843')
+                ->set_attribute('type', 'number')
                 ->set_conditional_logic([
                     [
                         'field' => 'enable_ads_after_content_option',

@@ -4,6 +4,7 @@ defined('ABSPATH') || exit;
 
 include get_template_directory() . '/ads/ads-header.php';
 include get_template_directory() . '/ads/ads-inline-article-shortcode.php';
+include get_template_directory() . '/ads/google-adsense-code.php';
 
 
 

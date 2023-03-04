@@ -14,6 +14,7 @@ defined('ABSPATH') || exit;
     <link rel="icon" href="<?php echo $favicon; ?>" type="image/x-icon" />
     <link rel="shortcut icon" href="<?php echo $favicon; ?>" type="image/x-icon" />
     <meta name="google-site-verification" content="t0f4zeLk5-eCUVe-mmb-v6npo10aUcuiv8RyYsj9j-g" />
+    <?php echo mnads_show_google_adsense_code_on_head(); ?>
     <!-- SEO Plugin by Budiharyono.com -->
     <?php echo mnplug_show_seo(); ?>
 
@@ -29,9 +30,9 @@ defined('ABSPATH') || exit;
     mntp_topbar();
     mntp_header();
     mntp_header_menu();
-    
-    
+
+
     wp_body_open();
-    
-    
+
+
     ?>

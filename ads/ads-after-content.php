@@ -13,15 +13,22 @@ function mnads_show_ads_after_content()
                     $adsLeft = carbon_get_theme_option('ads_after_content_left_mn');
                     if (empty($adsLeft)) {
                     ?>
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7273106919951725" crossorigin="anonymous"></script>
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<?php echo mnads_get_google_ca_pub(); ?>" crossorigin="anonymous"></script>
                         <!-- All Size Responsive -->
-                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7273106919951725" data-ad-slot="3029550843" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                        <ins class="adsbygoogle" style="display:block" data-ad-client="<?php echo mnads_get_google_ca_pub(); ?>" data-ad-slot="3029550843" data-ad-format="auto" data-full-width-responsive="true"></ins>
                         <script>
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
                     <?php
                     } else {
-                        $adsLeft = $adsLeft;
+                    ?>
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<?php echo mnads_get_google_ca_pub(); ?>" crossorigin="anonymous"></script>
+                        <!-- All Size Responsive -->
+                        <ins class="adsbygoogle" style="display:block" data-ad-client="<?php echo mnads_get_google_ca_pub(); ?>" data-ad-slot="<?php echo $adsLeft; ?>" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    <?php
                     }
                     ?>
                 </div>
@@ -30,16 +37,23 @@ function mnads_show_ads_after_content()
                     $adsRight = carbon_get_theme_option('ads_after_content_right_mn');
                     if (empty($adsRight)) {
                     ?>
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7273106919951725" crossorigin="anonymous"></script>
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<?php echo mnads_get_google_ca_pub(); ?>" crossorigin="anonymous"></script>
                         <!-- All Size Responsive -->
-                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7273106919951725" data-ad-slot="3029550843" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                        <ins class="adsbygoogle" style="display:block" data-ad-client="<?php echo mnads_get_google_ca_pub(); ?>" data-ad-slot="3029550843" data-ad-format="auto" data-full-width-responsive="true"></ins>
                         <script>
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
                     <?php
 
                     } else {
-                        $adsRight = $adsRight;
+                    ?>
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<?php echo mnads_get_google_ca_pub(); ?>" crossorigin="anonymous"></script>
+                        <!-- All Size Responsive -->
+                        <ins class="adsbygoogle" style="display:block" data-ad-client="<?php echo mnads_get_google_ca_pub(); ?>" data-ad-slot="<?php echo $adsRight; ?>" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    <?php
                     }
 
                     ?>
