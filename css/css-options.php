@@ -34,7 +34,7 @@ function load_mm_css()
 
 
     // conditional load css
-    if (is_home() || is_tag() && has_category('journal')) {
+    if (is_home() || is_tag() && has_category('journal') || is_category()) {
         wp_enqueue_style('home-css', get_template_directory_uri() . '/css/home.css', array(), $version, 'all');
         wp_enqueue_style('home-media-css', get_template_directory_uri() . '/css/home-media.css', array('home-css'), $version, 'all');
 

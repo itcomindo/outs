@@ -1,6 +1,8 @@
 .singleWr {
   width: 100%;
   display: flex;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 .singleLeft {
   display: flex;
@@ -25,9 +27,9 @@
   aspect-ratio: 16/9;
 }
 .unsplashAuthor {
-    z-index: 2;
-    font-size: 80%;
-    margin-left: 8px;
+  z-index: 2;
+  font-size: 80%;
+  margin-left: 8px;
 }
 .singlePostTitleWr,
 .singleMetaWr,
@@ -96,12 +98,6 @@
   background-color: var(--colpal-10);
 }
 
-.globalSidebarHeadWr {
-  width: 100%;
-  background-color: var(--colpal-11);
-  color: white;
-  padding: 0 4px;
-}
 .globalSidebarHead {
   font-size: clamp(1em, 2.5vw, 1.1em);
 }
@@ -146,7 +142,6 @@
 .theContent .wp-caption.alignnone {
   width: 100% !important;
 }
-
 
 .inlineAdsPr {
   min-width: 100%;
@@ -237,12 +232,12 @@
     max-height: 200px;
   }
   .singlePostTitleWr,
-.singleMetaWr,
-.theContent,
-.singleTagWr,
-.singleCommentFormWr {
-  padding: 16px 8px;
-}
+  .singleMetaWr,
+  .theContent,
+  .singleTagWr,
+  .singleCommentFormWr {
+    padding: 16px 8px;
+  }
   .globalPostFeaturedImage img {
     height: 100%;
     object-fit: cover;

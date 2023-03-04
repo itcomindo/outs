@@ -83,7 +83,7 @@ get_header();
             <div class="singleRight singleCol">
                 <aside class="globalAsideWr">
                     <div class="globalSidebar">
-                        <?php echo mnel_show_sidebar_head('globalSidebarHeadWr', 'Sidebar Head'); ?>
+                        <?php echo mnel_show_sidebar_head('globalSidebarHeadWr', 'Sidebar Head', 'right'); ?>
                     </div>
                 </aside>
             </div>

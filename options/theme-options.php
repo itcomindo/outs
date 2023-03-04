@@ -169,7 +169,11 @@ function mn_theme_options()
     // HOMEPAGE OPTIONS
     Container::make('theme_options', 'Homepage Options')
         ->set_page_parent($theme_options)
-        ->add_fields([]);
+        ->add_fields([
+            // checkbox aktifkan infinite scroll option
+            Field::make('checkbox', 'enable_disable_infinite_scroll_mn', 'Enable/Disable Infinite Scroll')
+                ->set_help_text('pilih untuk mengaktifkan infinite scroll'),
+        ]);
     // PAGE OPTIONS
     Container::make('theme_options', 'Page Options')
         ->set_page_parent($theme_options)
@@ -233,9 +237,10 @@ function mn_theme_options()
             Field::make('checkbox', 'enable_ads_after_content_option', 'Enable/Disable Ads After Content')
                 ->set_option_value('yes')
                 ->set_help_text('pilih untuk mengaktifkan ads after content'),
-            
+
             // ads after content left
             Field::make('textarea', 'ads_after_content_left_mn', 'Ads After Content Left')
+                ->set_required(true)
                 ->set_help_text('masukan kode adsense untuk menampilkan di setelah konten artikel, sebelah kiri')
                 ->set_conditional_logic([
                     [
@@ -246,6 +251,7 @@ function mn_theme_options()
 
             // ads after content right
             Field::make('textarea', 'ads_after_content_right_mn', 'Ads After Content Right')
+                ->set_required(true)
                 ->set_help_text('masukan kode adsense untuk menampilkan di setelah konten artikel, sebelah kanan')
                 ->set_conditional_logic([
                     [

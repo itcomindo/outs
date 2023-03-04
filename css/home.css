@@ -222,16 +222,16 @@
   display: none;
 }
 .globalQTitle {
-  font-size: clamp(0.5rem, 3vw, 0.8rem);
-  font-weight: normal;
-  line-height: 1.4;
-  margin: 16px 0;
-  color: white;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
+    font-size: clamp(0.80rem, 1vw, 0.80rem);
+    font-weight: normal;
+    line-height: 1.4;
+    margin: 16px 0;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
 .globalReadmoreBtn {

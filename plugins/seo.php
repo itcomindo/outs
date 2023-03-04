@@ -84,12 +84,17 @@ function mnplug_show_seo()
             $description = substr($description, 0, 160);
         }
         $robots = 'index, follow';
-    } elseif (is_category()) {
+    } elseif (is_category() && has_category('journal')) {
         $catID = mncore_catID();
-        // get category name
         $title = get_cat_name($catID);
         $description = $title . ' ' . get_bloginfo('description') . ' yang beroperasi atau berkantor nomor telepon perusahaan yayasan agency biro penyalur penyedia outsourcing di ' . $title;
         $robots = 'index, follow';
+    } elseif (is_category() && ! has_category('journal')) {
+        $catID = mncore_catID();
+        $title = 'Nama dan Telepon Perusahaan Outsourcing di ' . get_cat_name($catID);
+        $description = 'Nama dan Nomor Telepon Perusahaan Outsourcing di ' . get_cat_name($catID) . ' persembahan outsourcing.web.id situs ' . get_bloginfo('description');
+        $robots = 'index, follow';
+
     } elseif (is_tag()) {
         $title = get_the_tags();
         $title = $title[0]->name;

@@ -82,13 +82,15 @@ function show_related_post_card_layout()
         <div class="qItem">
             <div class="globalQTop">
                 <a title="<?php echo get_the_title(); ?>" href="<?php echo get_the_permalink(); ?>">
-                    <?php echo mnel_show_featured_image(); ?>
+                    <?php // echo mnel_show_featured_image(); 
+                    ?>
+                    <?php echo mncore_custom_featured_image(true); ?>
                 </a>
             </div>
             <div class="globalQBot">
                 <div class="globalQTitleWr">
                     <h3 class="globalQTitle">
-                        <a title="<?php echo get_the_title(); ?>" href="<?php echo $permalink; ?>">
+                        <a title="<?php echo get_the_title(); ?>" href="<?php echo get_the_permalink(); ?>">
                             <?php echo get_the_title(); ?>
                         </a>
                     </h3>
