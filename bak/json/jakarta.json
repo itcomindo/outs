@@ -1,0 +1,29 @@
+{
+    "DKI Jakarta": [
+        {
+            "Kabupaten/Kota": "Jakarta Barat",
+            "Bupati/Wali Kota": "Sugiyono Mangunwiyoto",
+            "Kode Pos": 11650
+        },
+        {
+            "Kabupaten/Kota": "Jakarta Utara",
+            "Bupati/Wali Kota": "Ignatius JosephIgnatius Joseph Kasimo",
+            "Kode Pos": 14450
+        },
+        {
+            "Kabupaten/Kota": "Jakarta Timur",
+            "Bupati/Wali Kota": "Aji Muhammad Idris",
+            "Kode Pos": 13470
+        },
+        {
+            "Kabupaten/Kota": "Jakarta Selatan",
+            "Bupati/Wali Kota": "Fatmawati",
+            "Kode Pos": 12270
+        },
+        {
+            "Kabupaten/Kota": "Jakarta Pusat",
+            "Bupati/Wali Kota": "Amir Hamzah",
+            "Kode Pos": 10160
+        }
+    ]
+}

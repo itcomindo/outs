@@ -15,6 +15,11 @@ function mnplugin_show_single_post_schema()
     $email = mncore_show_author_email();
     $provinsi = get_cat_name(mncore_catID());
     $kodepos = mncore_local_business_kodepos();
+    if (empty($kodepos)) {
+        $kodepos = the_kodepos();
+    } else {
+        $kodepos = $kodepos;
+    }
     $logo = mnuser_show_logo_perusahaan_url_only();
     $image = mncore_custom_featured_image(false);
     $phone = mncore_show_user_phone();

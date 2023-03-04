@@ -1,0 +1,64 @@
+{
+  "provinsi": [
+    {
+      "Provinsi": "Nanggroe Aceh Darusallam",
+      "Kota": "Banda Aceh",
+      "Alamat": "Wahid Hasyim",
+      "Kodepos": "23521"
+    },
+    {
+      "Provinsi": "Sumatra Utara",
+      "Kota": "Medan",
+      "Alamat": "Mas Mansur",
+      "Kodepos": "20222"
+    },
+    {
+      "Provinsi": "Sumatra Barat",
+      "Kota": "Padang",
+      "Alamat": "Hamengkubuwono IX",
+      "Kodepos": "25211"
+    },
+    {
+      "Provinsi": "Riau",
+      "Kota": "Pekanbaru",
+      "Alamat": "I GustiI Gusti Ngurah Made Agung",
+      "Kodepos": "28125"
+    },
+    {
+      "Provinsi": "Jambi",
+      "Kota": "Kota Jambi",
+      "Alamat": "Rajiman Wediodiningrat",
+      "Kodepos": "36135"
+    },
+    {
+      "Provinsi": "Sumatra Selatan",
+      "Kota": "Palembang",
+      "Alamat": "Pakubuwono VI",
+      "Kodepos": "30137"
+    },
+    {
+      "Provinsi": "Bengkulu",
+      "Kota": "Kota Bengkulu",
+      "Alamat": "Donald Izacus Panjaitan",
+      "Kodepos": "38222"
+    },
+    {
+      "Provinsi": "Lampung",
+      "Kota": "Bandar Lampung",
+      "Alamat": "Baabullah",
+      "Kodepos": "35212"
+    },
+    {
+      "Provinsi": "Kepulauan Bangka Belitung",
+      "Kota": "Pangkal Pinang",
+      "Alamat": "Iwa Kusumasumantri",
+      "Kodepos": "33684"
+    },
+    {
+      "Provinsi": "Kepulauan Riau",
+      "Kota": "Tanjung Pinang",
+      "Alamat": "Wage Rudolf Supratman",
+      "Kodepos": "29125"
+    }
+  ]
+}

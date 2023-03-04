@@ -1,0 +1,99 @@
+{
+  "Jawa Barat": [
+    {
+      "kota": "Bandung",
+      "kecamatan": "Sultan Daeng Radja",
+      "kode_pos": "40114"
+    },
+    {
+      "kota": "Bekasi",
+      "kecamatan": "Sisingamangaraja XII",
+      "kode_pos": "13450"
+    },
+    {
+      "kota": "Depok",
+      "kecamatan": "Samanhudi",
+      "kode_pos": "10550"
+    },
+    {
+      "kota": "Bogor",
+      "kecamatan": "Izaak Huru Doko",
+      "kode_pos": "16111"
+    },
+    {
+      "kota": "Cirebon",
+      "kecamatan": "Muhammad Zainuddin Abdul Madjid",
+      "kode_pos": "45111"
+    },
+    {
+      "kota": "Tasikmalaya",
+      "kecamatan": "Adam Malik",
+      "kode_pos": "46111"
+    },
+    {
+      "kota": "Cimahi",
+      "kecamatan": "Wilhelmus Zakaria Johannes",
+      "kode_pos": "40521"
+    },
+    {
+      "kota": "Karawang",
+      "kecamatan": "Ida Anak Agung Gde Agung",
+      "kode_pos": "41051"
+    },
+    {
+      "kota": "Subang",
+      "kecamatan": "Ki Bagus Hadikusumo",
+      "kode_pos": "41250"
+    },
+    {
+      "kota": "Sukabumi",
+      "kecamatan": "Tirtayasa",
+      "kode_pos": "43356"
+    },
+    {
+      "kota": "Purwakarta",
+      "kecamatan": "Ismail Marzuki",
+      "kode_pos": "41162"
+    },
+    {
+      "kota": "Cianjur",
+      "kecamatan": "Noer Alie",
+      "kode_pos": "43211"
+    },
+    {
+      "kota": "Kuningan",
+      "kecamatan": "AndiAndi Jemma",
+      "kode_pos": "45514"
+    },
+    {
+      "kota": "Ciamis",
+      "kecamatan": "Sutan Mohammad Amin Nasution",
+      "kode_pos": "46254"
+    },
+    {
+      "kota": "Garut",
+      "kecamatan": "Iswahyudi",
+      "kode_pos": "22616"
+    },
+    {
+      "kota": "Sumedang",
+      "kecamatan": "Ilyas Yakoub",
+      "kode_pos": "45371"
+    },
+    {
+      "kota": "Banjar",
+      "kecamatan": "Mustopo",
+      "kode_pos": "46312"
+    },
+    {
+      "kota": "Majalengka",
+      "kecamatan": "TeungkuTeungku Chik di Tiro",
+      "kode_pos": "45457"
+    },
+    {
+      "kota": "Indramayu",
+      "kecamatan": "Inten II",
+      "kode_pos": "45262"
+    }
+  ]
+}
