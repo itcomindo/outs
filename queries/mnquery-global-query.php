@@ -10,9 +10,10 @@ defined('ABSPATH') || exit;
  * @param string $wrapperClass the items wrapper class
  * @param string $itemClass the item class
  * @param string $layout the layout of the query card or list
+ * @param string $excerpt show excerpt or not
  */
 
-function mnqu_show_global_query($by = "tag", $postPerPage = 10, $headTitle = "Related Posts:", $layout = "card")
+function mnqu_show_global_query($by = "tag", $postPerPage = 10, $headTitle = "Related Posts:", $layout = "card", $excerpt = "yes")
 {
     if ($by == 'tag') {
         $tagID = mncore_tagID();
@@ -41,7 +42,7 @@ function mnqu_show_global_query($by = "tag", $postPerPage = 10, $headTitle = "Re
     $query = new WP_Query($args);
     if ($query->have_posts()) {
 ?>
-        <div class="qItemPr">
+        <div class="qItemPr <?php echo $layout ?>">
             <h3 class="globalElementHead"><?php echo $headTitle; ?></h3>
             <div class="qItemWr <?php echo $layout ?>">
             <?php
@@ -50,7 +51,7 @@ function mnqu_show_global_query($by = "tag", $postPerPage = 10, $headTitle = "Re
                 if ($layout == 'card') {
                     echo show_related_post_card_layout();
                 } elseif ($layout == 'list') {
-                    echo related_post_list_layout();
+                    echo related_post_list_layout($excerpt);
                 }
             }
             // reset post data
@@ -65,13 +66,20 @@ function mnqu_show_global_query($by = "tag", $postPerPage = 10, $headTitle = "Re
 }
 
 
-function related_post_list_layout()
+function related_post_list_layout($excerpt = 'no')
 {
     ?>
         <div class="qItem list">
             <h3>
                 <a title="<?php echo get_the_title(); ?>" href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a>
             </h3>
+            <?php
+            if ($excerpt == 'yes') {
+                echo mnel_show_post_excerpt(160);
+            } else {
+                // do nothing
+            }
+            ?>
         </div>
     <?php
 }
@@ -79,11 +87,9 @@ function related_post_list_layout()
 function show_related_post_card_layout()
 {
     ?>
-        <div class="qItem">
+        <div class="qItem card">
             <div class="globalQTop">
                 <a title="<?php echo get_the_title(); ?>" href="<?php echo get_the_permalink(); ?>">
-                    <?php // echo mnel_show_featured_image(); 
-                    ?>
                     <?php echo mncore_custom_featured_image(true); ?>
                 </a>
             </div>
@@ -98,7 +104,6 @@ function show_related_post_card_layout()
                 <div class="globalQMetaWr">
                     <?php echo mnel_show_post_date(); ?>
                     <?php echo mnel_show_post_author(false); ?>
-                    <?php echo mnel_show_comments_count(); ?>
                     <?php echo mnel_show_post_excerpt(50); ?>
                     <?php echo mnel_show_readmore_button('', 'Baca Artikel'); ?>
                 </div>

@@ -19,7 +19,6 @@ get_header();
                     <h1 class="globalPostTitle">
                         <?php echo mnel_show_custom_post_title(); ?>
                     </h1>
-
                 </div>
                 <div class="singleMetaWr">
                     <div class="singleAuthorWr">
@@ -33,9 +32,7 @@ get_header();
                             echo mnel_show_post_author(false);
                         }
                         ?>
-
                     </div>
-
                     <?php echo mnel_show_post_date(); ?>
                     <?php echo mnel_show_post_category(); ?>
                 </div>
@@ -50,32 +47,17 @@ get_header();
                     <?php echo mnel_show_post_tags(); ?>
                 </div>
                 <?php echo mnads_show_ads_after_content(); ?>
-                
                 <?php
-                /*
-                if (!mncore_is_journal()) {
-                    echo mnplugin_show_single_post_schema();
-                }
-                */
+                if (has_category('journal')) {
                 ?>
-                <div class="singleCommentFormWr">
-                    <?php
-                    if (comments_open() || get_comments_number()) {
-                    ?>
-                        <div id="globalCommentWr" class="active">
-                            <?php //comments_template(); ?>
-                        </div>
-                    <?php
-                    }
-                    ?>
-                </div>
-                <div class="singleRelatedPostWr">
-                    <?php //echo mnqu_show_global_query('tag', 10, 'Related Post By Tag', 'list'); 
-                    ?>
-                    <?php // echo mnqu_show_global_query('category', 10, 'Related Post By Category'); 
-                    ?>
-
-                </div>
+                    <div class="singleRelatedPostWr">
+                        <?php echo mnqu_show_global_query('tag', 6, 'Related Post By Tag', 'list', 'yes'); ?>
+                        <?php echo mnqu_show_global_query('category', 6, 'Related Post By Category'); 
+                        ?>
+                    </div>
+                <?php
+                }
+                ?>
                 <!-- the content end -->
             </div>
             <!-- single left end -->

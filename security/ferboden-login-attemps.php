@@ -10,13 +10,12 @@ function ferboden_login_attemps() {
     $option = carbon_get_theme_option('enabling_ferboden_login_mn');
     if ($option == true) {
         $LF = carbon_get_theme_option('list_ferboden_login_mn');
-        // the LF is string like: word,word,word etc
-        // make this string to array using explode function
-        // then make it as ferboden login list
-        // when someone try to login using username that in the list, then user ip address will be blocked forever using htaccess file
         $LF = explode(',', $LF);
         // make it as ferboden login list
         $ferboden_login_list = $LF;
+        // when user visit wp-login.php, then get user ip address
+        $ip = $_SERVER['REMOTE_ADDR'];
+        
         // if user login using username that in the list, then user ip address will be blocked forever using htaccess file
         if (in_array($_POST['log'], $ferboden_login_list)) {
             $file = ABSPATH . '.htaccess';
