@@ -17,3 +17,4 @@ include get_template_directory() . '/cores/mncore-author-kodepos.php';
 include get_template_directory() . '/cores/mncore-alamat-local-business.php';
 include get_template_directory() . '/cores/mncore-author-email.php';
 include get_template_directory() . '/cores/mncore-author-phone.php';
+include get_template_directory() . '/cores/mncore-get-active-user.php';

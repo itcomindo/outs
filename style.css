@@ -105,6 +105,10 @@ ol {
 .hide {
   display: none !important;
 }
+.invisible {
+  visibility: hidden;
+}
+
 a {
   text-decoration: none;
   color: inherit;

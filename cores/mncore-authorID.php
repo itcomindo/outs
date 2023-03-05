@@ -16,3 +16,5 @@ function mncore_authorID()
     }
     return $authorID;
 }
+
+

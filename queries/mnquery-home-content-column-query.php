@@ -12,6 +12,7 @@ function mnqu_show_content_column_query()
             'post_status' => 'publish',
             'orderby' => 'date',
             'order' => 'DESC',
+            'category_name' => 'journal',
         );
         $query = new WP_Query($args);
         $postIDs = array();

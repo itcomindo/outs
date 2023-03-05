@@ -25,9 +25,24 @@
     color: white;
     font-size: 80%;
   }
+  /* home conten column */
+  .homeContLeft {
+    width: 100%;
+    order: 1;
+    margin-bottom: 16px;
+  }
+  .homeContMid {
+    width: 100%;
+    order: 0;
+  }
+  .homeContRight {
+    width: 100%;
+    margin-bottom: 16px;
+    order: 2;
+  }
 }
 @media screen and (max-width: 768px) {
-  .homeContLeft {
+  /* .homeContLeft {
     width: 33.3%;
   }
   .homeContRight {
@@ -35,8 +50,7 @@
     margin-top: 16px;
     margin-bottom: 16px;
     order: 2;
-  }
-
+  } */
 }
 @media screen and (max-width: 600px) {
   .homeContLeft {
