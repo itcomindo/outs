@@ -1,6 +1,6 @@
 <?php
 defined('ABSPATH') || exit;
-function mnuser_show_nama_perusahaan($link, $class = 'globalNamaPerusahaan')
+function mnel_show_nama_perusahaan($link, $class = 'globalNamaPerusahaan')
 {
     if (is_single()) {
         if ($link) {

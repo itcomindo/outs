@@ -39,10 +39,3 @@ function mnel_conditional_element_loader() {
 add_action('wp', 'mnel_conditional_element_loader');
 
 
-
-// next element will release soon
-/*
-include get_template_directory() . '/elements/show-chatbox.php';
-include get_template_directory() . '/elements/show-search-form.php';
-
-*/

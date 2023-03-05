@@ -27,7 +27,7 @@ get_header();
                         $isEditor = mncore_is_editor_role();
                         if ($isEditor) {
                         ?>
-                            By: <?php echo mnuser_logo_and_name(); ?>
+                            By: <?php echo mnel_logo_and_name(); ?>
                         <?php
                         } else {
                             echo mnel_show_post_author(false);

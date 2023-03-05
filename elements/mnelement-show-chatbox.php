@@ -12,12 +12,12 @@ function mnel_show_chatbox()
         <div class="cbWr">
             <div class="cbTop">
                 <div class="cbTopLeft">
-                    <?php echo mnuser_show_logo_perusahaan(false, 'animate__animated', '60'); ?>
+                    <?php echo mnel_show_logo_perusahaan(false, 'animate__animated', '60'); ?>
                 </div>
                 <div class="cbTopRight">
                     <span class="csHead">Customer Service</span>
                     <span class="cbNamaPerusahaan">
-                        <?php echo mnuser_show_nama_perusahaan(false); ?>
+                        <?php echo mnel_show_nama_perusahaan(false); ?>
                     </span>
                 </div>
             </div>

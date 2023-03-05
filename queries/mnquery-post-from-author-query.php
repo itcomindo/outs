@@ -37,17 +37,12 @@ function home_query()
                         $query->the_post();
                         $post_id = get_the_ID();
                         $title = get_the_title();
-                        // get the author role
-                        // $author_role = get_the_author_meta('role', $author_id); not working
                         $author_role = get_user_meta($author_id, 'role', true);
                         $permalink = get_the_permalink();
-                        
-                        $post_author_id = get_post_field('post_author', $post_id); // Get the post author ID
+                        $post_author_id = get_post_field('post_author', $post_id);
                         $user_data = get_userdata($post_author_id);
                         $author_role = $user_data->roles[0];
-
                         if ($author_role == 'editor') {
-
                             echo '<div class="homeContColPostItem">';
                             echo '<div class="homeContColPostItemLeft">';
                             echo '<a href="' . $permalink . '">';
@@ -58,17 +53,12 @@ function home_query()
                             echo '<h3><a href="' . $permalink . '">' . $title . '</a></h3>';
                             echo '<div class="homeTagWr">';
                             echo '<span class="homeTagsItemsWr">';
-                            echo mnuser_logo_and_name();
+                            echo mnel_logo_and_name();
                             echo '</span>';
                             echo '</div>';
                             echo '</div>';
                             echo '</div>';
-
                         }
-
-
-
-                        
                     }
                 } else {
                     // do nothing

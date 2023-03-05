@@ -26,7 +26,7 @@ function mnqu_show_sticky_post_query($postPerPage = 3)
             <div class="slideItem">
                 <div class="qItemTop">
                     <div class="globalLogoAndName">
-                        <?php echo mnuser_show_logo_perusahaan(false, '', '20') . ' ' . mnuser_show_nama_perusahaan(false, 'namaPerusahaanInSlide'); ?>
+                        <?php echo mnel_show_logo_perusahaan(false, '', '20') . ' ' . mnel_show_nama_perusahaan(false, 'namaPerusahaanInSlide'); ?>
                     </div>
                     <?php echo mnel_show_post_views('homePostView'); ?>
                     <a title="<?php echo $title; ?>" href="<?php echo $permalink; ?>">

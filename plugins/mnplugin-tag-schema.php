@@ -21,7 +21,7 @@ function mnplugin_show_tag_post_schema()
     } else {
         $kodepos = $kodepos;
     }
-    $logo = mnuser_show_logo_perusahaan_url_only();
+    $logo = mnel_show_logo_perusahaan_url_only();
     $image = mncore_custom_featured_image(false);
     $phone = mncore_show_user_phone();
     // get tag permalink

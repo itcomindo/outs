@@ -1,7 +1,7 @@
 <?php
 defined('ABSPATH') || exit;
 
-function mn_show_comment_form() {
+function mnel_show_comment_form() {
     // if comment open show comment form
     if (comments_open()) {
         $comment_form = '<div class="globalCommentFormWr">';
@@ -31,7 +31,7 @@ function mn_show_comment_form() {
 }
 
 // post comments
-function mn_show_post_comments() {
+function mnel_show_post_comments() {
     $postID = mncore_postID();
     $comments = get_comments(array(
         'post_id' => $postID,

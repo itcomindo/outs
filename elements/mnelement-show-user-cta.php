@@ -1,10 +1,5 @@
 <?php
 defined('ABSPATH') || exit;
-
-
-
-
-
 /**
  * Show user cta
  * ini bisa chat whatsapp atau telepon
@@ -25,17 +20,14 @@ function mnel_show_user_phone_number($number) {
         // wait
     } elseif (is_tag()) {
         // wait
-
     } elseif (is_author()) {
         // wait
     }
 }
-
 function mnel_show_user_wacall($type = "whatsapp") {
     $phone = mnel_show_user_phone_number(false);
     if ($type == 'whatsapp') {
         $ctaButton = "<a href='https://api.whatsapp.com/send?phone=$phone' class='globalCtaButton' target='_blank'>Chat via Whatsapp</a>";
-
     } elseif ($type == 'call') {
         $ctaButton = "<a href='tel:$phone' class='globalCtaButton' target='_blank'>Call</a>";
     } elseif ($type == 'linknumber') {

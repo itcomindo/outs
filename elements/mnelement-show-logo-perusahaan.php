@@ -2,7 +2,7 @@
 defined('ABSPATH') || exit;
 
 
-function mnuser_show_logo_perusahaan_url_only() {
+function mnel_show_logo_perusahaan_url_only() {
     if (is_single()) {
         $authorID = get_post_field('post_author', mncore_postID());
         $urlLogo = carbon_get_user_meta($authorID, 'logo_image_user');
@@ -26,7 +26,7 @@ function mnuser_show_logo_perusahaan_url_only() {
  * @param $width integer
  */
 
-function mnuser_show_logo_perusahaan($link, $class = 'globalLogoPerusahaan', $width = '150')
+function mnel_show_logo_perusahaan($link, $class = 'globalLogoPerusahaan', $width = '150')
 {
     if (is_single()) {
         if ($link) {
@@ -67,12 +67,12 @@ function mnuser_show_logo_perusahaan($link, $class = 'globalLogoPerusahaan', $wi
 }
 
 
-function mnuser_logo_and_name()
+function mnel_logo_and_name()
 {
 ?>
     <span class="globalLogoAndName">
-        <?php echo mnuser_show_logo_perusahaan(false, '', '20'); ?>
-        <?php echo mnuser_show_nama_perusahaan(false); ?>
+        <?php echo mnel_show_logo_perusahaan(false, '', '20'); ?>
+        <?php echo mnel_show_nama_perusahaan(false); ?>
     </span>
 <?php
 }
