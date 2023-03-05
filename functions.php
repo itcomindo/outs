@@ -83,7 +83,7 @@ include get_template_directory() . '/filters/filters.php';
 include get_template_directory() . '/forms/forms.php';
 
 // include menus
-include get_template_directory() . '/menus/menus.php';
+include get_template_directory() . '/menus/mnmenu-menus.php';
 
 
 // include queries

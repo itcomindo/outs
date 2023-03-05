@@ -169,6 +169,7 @@
   height: 100%;
   overflow: hidden;
   position: relative;
+  object-fit: cover;
 }
 
 .globalPostFeaturedImage:before {
@@ -222,16 +223,16 @@
   display: none;
 }
 .globalQTitle {
-    font-size: clamp(0.80rem, 1vw, 0.80rem);
-    font-weight: normal;
-    line-height: 1.4;
-    margin: 16px 0;
-    color: white;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
+  font-size: clamp(0.8rem, 1vw, 0.8rem);
+  font-weight: normal;
+  line-height: 1.4;
+  margin: 16px 0;
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 .globalReadmoreBtn {
@@ -263,7 +264,6 @@
 .adsHomeRowOneWr p {
   width: 80%;
 }
-
 
 /* Home Content Column */
 .homeContColWr {
@@ -336,9 +336,9 @@
   overflow: hidden;
 }
 .homeContColPostItemLeft a .globalPostFeaturedImage {
-    width: 100px;
-    height: 100%;
-    object-fit: cover;
+  width: 100px;
+  height: 100%;
+  object-fit: cover;
 }
 .homeContColPostItemLeft a .globalPostFeaturedImage img {
   width: 100%;

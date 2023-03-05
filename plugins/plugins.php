@@ -1,12 +1,12 @@
 <?php
 defined('ABSPATH') || exit;
 
-include get_template_directory() . '/plugins/seo.php';
-include get_template_directory() . '/plugins/image-converter-to-webp.php';
-include get_template_directory() . '/plugins/auto-create-folder-for-user.php';
-include get_template_directory() . '/plugins/nama-nama-kota.php';
-include get_template_directory() . '/plugins/kodepos-data.php';
-include get_template_directory() . '/plugins/sitemap.php';
+include get_template_directory() . '/plugins/mnplugin-seo.php';
+include get_template_directory() . '/plugins/mnplugin-image-converter-to-webp.php';
+include get_template_directory() . '/plugins/mnplugin-auto-create-folder-for-user.php';
+include get_template_directory() . '/plugins/mnplugin-nama-nama-kota.php';
+include get_template_directory() . '/plugins/mnplugin-kodepos-data.php';
+include get_template_directory() . '/plugins/mnplugin-sitemap.php';
 
 /**
  * Plugin Loader
@@ -14,9 +14,9 @@ include get_template_directory() . '/plugins/sitemap.php';
  */
 function mnplugin_conditional_plugin_loader() {
     if (is_single() && ! has_category('journal')) {
-        include get_template_directory() . '/plugins/single-post-schema.php';
+        include get_template_directory() . '/plugins/mnplugin-single-post-schema.php';
     } elseif (is_tag() && ! has_category('journal')) {
-        include get_template_directory() . '/plugins/tag-schema.php';
+        include get_template_directory() . '/plugins/mnplugin-tag-schema.php';
     }
 }
 add_action('wp', 'mnplugin_conditional_plugin_loader');

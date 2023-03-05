@@ -1,8 +1,8 @@
 <?php
 defined('ABSPATH') || exit;
 
-include get_template_directory() . '/fields/journal-post-fields.php';
-include get_template_directory() . '/fields/user-fields.php';
-include get_template_directory() . '/fields/local-business-fields.php';
+include get_template_directory() . '/fields/mnfields-journal-post-fields.php';
+include get_template_directory() . '/fields/mnfields-user-fields.php';
+include get_template_directory() . '/fields/mnfields-local-business-fields.php';
 
 

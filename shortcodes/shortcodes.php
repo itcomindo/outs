@@ -1,9 +1,9 @@
 <?php
 defined('ABSPATH') || exit;
 
-include get_template_directory() . '/shortcodes/table-maker.php';
-include get_template_directory() . '/shortcodes/nama-perusahaan-shortcode.php';
-include get_template_directory() . '/shortcodes/nomor-telepon-shortcode.php';
-include get_template_directory() . '/shortcodes/disrtrik-shortcode.php';
-include get_template_directory() . '/shortcodes/kota-shortcode.php';
-include get_template_directory() . '/shortcodes/provinsi-shortcode.php';
+include get_template_directory() . '/shortcodes/mnshortcode-table-maker.php';
+include get_template_directory() . '/shortcodes/mnshortcode-nama-perusahaan-shortcode.php';
+include get_template_directory() . '/shortcodes/mnshortcode-nomor-telepon-shortcode.php';
+include get_template_directory() . '/shortcodes/mnshortcode-disrtrik-shortcode.php';
+include get_template_directory() . '/shortcodes/mnshortcode-kota-shortcode.php';
+include get_template_directory() . '/shortcodes/mnshortcode-provinsi-shortcode.php';
