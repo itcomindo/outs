@@ -26,7 +26,6 @@ function mnel_show_post_tags($wrap = 'globalTagWr', $class = 'globalTagList')
                     <?php
                     $tagID = $tag->term_id;
                     $tagName = $tag->name;
-                    // if $tagNAme contain Dunia , replace with nothing and replace space with nothing
                     $tagName = str_replace('Dunia', '', $tagName);
                     $tagLink = get_tag_link($tagID);
                     echo '<li><a title="' . $tagName . '" class="globalTagLink"  href="' . $tagLink . ' ">#' . $tagName . '</a></li>';

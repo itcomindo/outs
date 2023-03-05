@@ -42,7 +42,8 @@ function mnqu_show_content_column_query()
                 $query->the_post();
                 $title = get_the_title();
                 $permalink = get_the_permalink();
-        ?>
+
+                echo '
                 <div class="homeContColPostItem">
                     <div class="homeContColPostItemLeft">
                         <a title="<?php echo $title; ?>" href="<?php echo $permalink; ?>">
@@ -53,9 +54,7 @@ function mnqu_show_content_column_query()
                         <h3><a title="<?php echo $title; ?>" href="<?php echo $permalink; ?>"><?php echo $title; ?></a></h3>
                         <?php echo mnel_show_post_tags('homeTagWr', 'homeTagsItemsWr'); ?>
                     </div>
-                </div>
-                <!-- display paged -->
-        <?php
+                </div>';
             }
             wp_reset_postdata();
         }
