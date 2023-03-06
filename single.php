@@ -13,9 +13,6 @@ get_header();
                     <?php echo mnel_show_post_views('singlePostViewsWr'); ?>
                     <?php echo mncore_custom_featured_image(true); ?>
                 </div>
-                <?php
-                echo mnel_show_unsplash_author($isJournal, 'unsplashAuthor');
-                ?>
                 <div class="singlePostTitleWr">
                     <h1 class="globalPostTitle">
                         <?php echo mnel_show_custom_post_title(); ?>
@@ -35,11 +32,7 @@ get_header();
                         ?>
                     </div>
                     <?php echo mnel_show_post_date(); ?>
-                    <?php echo mnel_show_post_category(); ?>
                 </div>
-                <?php
-                // echo mnel_show_comments_count();
-                ?>
                 <!-- the content start -->
                 <div class="theContent">
                     <?php echo the_content(); ?>
@@ -55,12 +48,10 @@ get_header();
                     <?php echo mnads_show_ads_multiplex_ads(); ?>
                     <div class="singleRelatedPostWr">
                         <?php echo mnqu_show_global_query('tag', 6, 'Related Post By Tag', 'list', 'yes'); ?>
-                        <?php echo mnqu_show_global_query('category', 6, 'Related Post By Category');
-                        ?>
+                        <?php echo mnqu_show_global_query('category', 6, 'Related Post By Category'); ?>
                     </div>
                     <?php
                 } else {
-                    echo mnel_show_association_posts();
                     echo mnqu_show_global_query('category', 6, 'Related Post By Category');
                 }
                 ?>

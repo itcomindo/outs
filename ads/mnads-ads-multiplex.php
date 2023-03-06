@@ -10,7 +10,7 @@ function mnads_show_ads_multiplex_ads()
             $clientID =
             $clientID = mnads_get_google_ca_pub();
             $slotID = $adsContent;
-            echo '<div class="singleRelatedPostWr">
+            echo '<div id="adsMultiplexWr" class="singleRelatedPostWr">
             <ins class="adsbygoogle"
             style="display:block"
             data-ad-format="autorelaxed"
