@@ -4,7 +4,7 @@
  * Author: Budi Haryono
  * Author URI: https://budiharyono.com/
  * Description: TheThemeDescription
- * Version: 6.A
+ * Version: 7
  */
 
 ::-webkit-scrollbar {
@@ -488,7 +488,17 @@ h6 {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-
+.globalQMetaWr {
+  width: 100%;
+}
+.globalQMetaWr .globalExcerpt {
+    font-size: 80%;
+    line-height: 1.5;
+    margin: 4px;
+}
+.globalQMetaWr a {
+    font-size: 80%;
+}
 .qItem.card .globalQBot .postDate,
 .qItem.card .globalQBot .globalPostAuthorWr {
   display: none;

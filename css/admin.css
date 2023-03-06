@@ -35,3 +35,15 @@
     left: 50%;
     transform: translateX(-50%);
 }
+
+.cbseperator {
+    background-color: #ddd;
+    color: white;
+}
+.cbseperator h3 {
+    line-height: 1;
+    margin: 4px 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+}

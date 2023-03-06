@@ -164,6 +164,12 @@ function mn_theme_options()
                 ->set_option_value('yes')
                 ->set_help_text('pilih untuk menampilkan author box'),
 
+
+            // enable disable associated post
+            Field::make('checkbox', 'enable_disable_associated_post_mn', 'Enable/Disable Associated Post')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk menampilkan associated post, yaitu mirip seperti related post tetapi post yang ditampilkan berdasarkan pilihan manual'),
+
         ]);
 
     // HOMEPAGE OPTIONS
@@ -207,7 +213,7 @@ function mn_theme_options()
 
 
             Field::make('separator', 'adsinseps', 'Ads In Content Shortcode')
-                ->set_classes('sbSeperator')
+                ->set_classes('cbseperator')
                 ->set_help_text('Ads In Content Shortcode, klik untuk mengaktifkan setiap ads, cara pakai dengan cara mengetikan shortcode contoh: [ads] atau [ads2] dst. <span class="redbold">TIPS: pastikan untuk memasukan SLOT ID yang berbeda-beda untuk setiap ads untuk menampilkan ads yang berbeda. Dan pastikan juga Anda membuat ads dengan tipe in article ads (BUKAN DISPLAY, FEED)'),
 
             // ads inline article shortcode
@@ -299,6 +305,11 @@ function mn_theme_options()
                     ]
                 ]),
 
+
+            Field::make('separator', 'adsaftercontentsep', 'Ads After Content')
+                ->set_classes('cbseperator')
+                ->set_help_text('Ads After Content adalah menampilkan kotak iklan yang tampil di satu row berisi dua kolom kiri dan kanan pada perangkan selain tablet dan diperangkat tablet - mobile 2 row dengan 1 kolom atas dan bawah.'),
+
             // ads after content, there 2 columns left and right
             // checkbox enable disable ads after content
             Field::make('checkbox', 'enable_ads_after_content_option', 'Enable/Disable Google Adsense After Content')
@@ -329,18 +340,22 @@ function mn_theme_options()
 
 
 
-            Field::make( 'separator', 'adsmultiplesep', 'Multiple Ads Show di Area Paling Bawah Post' ),
-            Field::make('checkbox', 'enable_ads_very_bottom_multiplex_ads','Aktifkan Multiplex Ads')
-            ->set_option_value( 'yes' ),
-            Field::make('text', 'ads_very_bottom_multiplex_ads_1','Ads Slot ID Multiple Ads')
-            ->set_help_text('PASTIKAN SUDAH INPUT CODE ca-pub-737xxxxx diatas terlebih dahulu sebelum memasukan ad-slot, isi ad-slot dibawah ketikan hanya angka misal: 3039550843, Cara menggunakannya cukup ketikan shortcode [ads] didalam artikel Anda.')
-            ->set_attribute('type', 'number')
-            ->set_conditional_logic([
-                [
-                    'field' => 'enable_ads_very_bottom_multiplex_ads',
-                    'value' => true,
-                ]
-            ]),
+            Field::make('separator', 'adsmultiplesep', 'Multiple Ads Show di Area Paling Bawah Post')
+                ->set_classes('cbseperator')
+                ->set_help_text('Multiple Ads Show di Area Paling Bawah Post adalah menampilkan kotak iklan yang tampil dengan layout grid jadi seakan-akan iklan adalah post dari website'),
+
+
+            Field::make('checkbox', 'enable_ads_very_bottom_multiplex_ads', 'Aktifkan Multiplex Ads')
+                ->set_option_value('yes'),
+            Field::make('text', 'ads_very_bottom_multiplex_ads_1', 'Ads Slot ID Multiple Ads')
+                ->set_help_text('PASTIKAN SUDAH INPUT CODE ca-pub-737xxxxx diatas terlebih dahulu sebelum memasukan ad-slot, isi ad-slot dibawah ketikan hanya angka misal: 3039550843, Cara menggunakannya cukup ketikan shortcode [ads] didalam artikel Anda.')
+                ->set_attribute('type', 'number')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'enable_ads_very_bottom_multiplex_ads',
+                        'value' => true,
+                    ]
+                ]),
 
 
         ]);

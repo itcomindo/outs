@@ -33,6 +33,7 @@ function mnel_conditional_element_loader() {
     } elseif (is_single() && has_category('journal')) {
         include get_template_directory() . '/elements/mnelement-show-mobile-floating-buttons.php';
         include get_template_directory() . '/elements/mnelement-show-mobile-floating-share.php';
+        include get_template_directory() . '/elements/mnelement-show-association-post.php';
     }
 }
 

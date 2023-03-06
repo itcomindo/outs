@@ -8,6 +8,7 @@ get_header();
         <div class="singleWr">
             <!-- single left start -->
             <div class="singleLeft singleCol">
+
                 <div class="singleFeaturedImageWr">
                     <?php echo mnel_show_post_views('singlePostViewsWr'); ?>
                     <?php echo mncore_custom_featured_image(true); ?>
@@ -50,9 +51,11 @@ get_header();
                 <?php
                 if (has_category('journal')) {
                 ?>
+
+                    <?php echo mnel_show_association_posts(); ?>
                     <div class="singleRelatedPostWr">
                         <?php echo mnqu_show_global_query('tag', 6, 'Related Post By Tag', 'list', 'yes'); ?>
-                        <?php echo mnqu_show_global_query('category', 6, 'Related Post By Category'); 
+                        <?php echo mnqu_show_global_query('category', 6, 'Related Post By Category');
                         ?>
                     </div>
                 <?php

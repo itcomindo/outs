@@ -26,5 +26,7 @@ include get_template_directory() . '/options/mnoption-author-box-option.php';
 include get_template_directory() . '/options/mnoption-auto-alt-title-img-on-post-option.php';
 // remove website field from comment form
 include get_template_directory() . '/options/mnoption-remove-website-field-in-comment-form-option.php';
+// associated post option
+include get_template_directory() . '/options/mnoption-enabling-associated-post-option.php';
 // seo options
 // include get_template_directory() . '/options/seo-option.php';
