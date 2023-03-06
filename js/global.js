@@ -50,6 +50,25 @@ window.addEventListener('DOMContentLoaded', (event) => {
             jQuery('body').removeClass('noScroll');
         });
 
+        // ADS Floating Bottom
+        var adsFloBotPR = jQuery('#adsFloBotPR');
+        var toggleCloseAdsFloBotPR = jQuery('#toggleCloseAdsFloBotPR');
+        var toggleOpenAdsFloBotPR = jQuery('#toggleOpenAdsFloBotPR');
+        toggleOpenAdsFloBotPR.slideUp();
+
+        jQuery(toggleCloseAdsFloBotPR).click(function () {
+            jQuery(this).slideUp();
+            toggleOpenAdsFloBotPR.slideDown();
+            jQuery(adsFloBotPR).removeClass('active').addClass('inactive');
+        });
+
+        // open ads flo bot
+        jQuery(toggleOpenAdsFloBotPR).click(function () {
+            jQuery(this).slideUp();
+            toggleCloseAdsFloBotPR.slideDown();
+            jQuery(adsFloBotPR).removeClass('inactive').addClass('active');
+        });
+
 
 
 

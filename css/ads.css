@@ -1,178 +1,384 @@
 /* ads in header start*/
 
 .adsInHeaderPr {
-    width: 460px;
-    height: 60px;
-    overflow: hidden;
+  width: 460px;
+  height: 60px;
+  overflow: hidden;
 }
 .adsInHeaderWr {
-    max-width: 460px;
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
+  max-width: 460px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
 }
 .adsInHeaderWr a {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .adsInHeaderWr a img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
-
 
 /* ads in header end */
 
 /* ads after home menu start  */
 
 #adsHAMPr {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    overflow: visible;
-    /* background-color: var(--colpal-10); */
-    background-color: #ddd;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  overflow: visible;
+  /* background-color: var(--colpal-10); */
+  background-color: #ddd;
 }
 
 .adsToggleCloseOpenWr {
-    position: absolute;
-    bottom: 5px;
-    right: 0;
-    width: max-content;
-    font-size: 70%;
-    line-height: 1;
-    background-color: #333;
-    color: white;
-    padding: 6px 8px;
-    cursor: pointer;
-    z-index: 2;
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  width: max-content;
+  font-size: 70%;
+  line-height: 1;
+  background-color: #333;
+  color: white;
+  padding: 6px 8px;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .adsHomeAfterMenuWr {
-    padding: 2em 8px;
-    display: flex;
-    align-items: center;
+  padding: 2em 8px;
+  display: flex;
+  align-items: center;
 }
 
 .adsHAMLeft {
-    width: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .adsHAMLeft a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .adsHAMRight {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: flex-start;
-    text-align: left;
-    margin-left: 6px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 6px;
 }
 .adsHAMRight h3 {
-    font-size: clamp(0.8rem, 1.8vw, 1rem);
-    line-height: 1;
-    margin: 6px 0;
-    font-family: var(--font-tertiary);
+  font-size: clamp(0.8rem, 1.8vw, 1rem);
+  line-height: 1;
+  margin: 6px 0;
+  font-family: var(--font-tertiary);
 }
 .adsHAMRight a {
-    font-size: 80%;
-    line-height: 1;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    background-color: var(--colpal-6);
-    color: white;
-    padding: 8px 18px;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+  font-size: 80%;
+  line-height: 1;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: var(--colpal-6);
+  color: white;
+  padding: 8px 18px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 .adsHAMRight small {
-    margin: 2px;
+  margin: 2px;
 }
 .adsHAMphone {
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* ads after content */
 .adsAfterContentPr {
-    font-size: 80%;
+  font-size: 80%;
 }
 .adsAfterContentPr,
 .adsAfterContentWr {
-    width: 100%;
-    overflow: hidden;
+  width: 100%;
+  overflow: hidden;
 }
 .adsAfterContentWr {
-    display: flex;
-    justify-content: center;
-    gap: 4px;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
 }
 
 .adsAfterContentCol {
-    min-width: 334px;
-    width: 334px;
-    max-width: 334px;
-    min-height: 300px;
-    height: 300px;
-    max-height: 300px;
-    padding: 16px;
-    overflow: hidden;
+  min-width: 334px;
+  width: 334px;
+  max-width: 334px;
+  min-height: 300px;
+  height: 300px;
+  max-height: 300px;
+  padding: 16px;
+  overflow: hidden;
+}
+
+/*
+ * ====================
+ *  ADS Floating Bottom
+ * ====================
+ */
+
+/* =================separator======================== */
+
+#adsFloBotPR.active {
+  width: 242px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-left: -476px;
+  padding: 0;
+  background-color: silver;
+  z-index: 99999;
+}
+
+#adsFloBotPR.inactive {
+  width: 242px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-left: -476px;
+  padding: 0;
+  background-color: silver;
+  z-index: 99999;
+  transform: translateY(calc(100% - 36px + 1.5em));
+  -webkit-transform: translateY(calc(100% - 36px + 1.5em));
+  -moz-transform: translateY(calc(100% - 36px + 1.5em));
+  -ms-transform: translateY(calc(100% - 36px + 1.5em));
+  -o-transform: translateY(calc(100% - 36px + 1.5em));
+}
+
+
+#toggleCloseAdsFloBotPR.active {
+  position: absolute;
+  width: calc(100% + 12px);
+  top: -20px;
+  left: -5px;
+  font-size: 14px;
+  line-height: 1;
+  background-color: darkred;
+  color: white;
+  padding: 6px 8px;
+  cursor: pointer;
+  text-align: center;
+  height: 30px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#toggleCloseAdsFloBotPR.inactive {
+  position: absolute;
+  width: calc(100% + 12px);
+  top: -20px;
+  left: -5px;
+  font-size: 14px;
+  line-height: 1;
+  background-color: darkred;
+  color: white;
+  padding: 6px 8px;
+  cursor: pointer;
+  text-align: center;
+  height: 30px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+#toggleOpenAdsFloBotPR {
+  position: absolute;
+  width: calc(100% + 12px);
+  top: -20px;
+  left: -5px;
+  font-size: 14px;
+  line-height: 1;
+  background-color: darkgreen;
+  color: white;
+  padding: 6px 8px;
+  cursor: pointer;
+  text-align: center;
+  height: 30px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+#toggleCloseAdsFloBotPR.active:before,
+#toggleOpenAdsFloBotPR:before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  border-top: 3px solid rgba(0, 0, 0, 0.8);
+  border-left: 3px solid transparent;
+  border-right: 3px solid rgba(0, 0, 0, 0.8);
+  border-bottom: 3px solid transparent;
+}
+
+#toggleCloseAdsFloBotPR.active:after,
+#toggleOpenAdsFloBotPR:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 1px;
+  border-top: 3px solid rgba(0, 0, 0, 0.8);
+  border-left: 3px solid rgba(0, 0, 0, 0.8);
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+}
+
+
+.adsFloContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5em 1em;
+}
+.adsFloBotHead {
+  font-size: 80%;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 4px 0;
+}
+.adsFloBotImgWr {
+  margin: 16px auto;
+}
+.adsFloContent small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.adsFloLogoLink {
+  margin: 16px auto;
+  font-size: 75%;
+  text-align: center;
+  line-height: 1.3;
+  padding: 6px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: darkred;
+  color: white;
+  position: relative;
+  z-index: 0;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.adsFloLogoLink:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #333, #000);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) inset;
+  z-index: -1;
+}
+/*
+ * ====================
+ *  Media Query Start
+ * ====================
+ */
+
+/* =================separator======================== */
+
+@media screen and (max-width: 992px) {
+  #adsFloBotPR.active {
+    margin-left: -393px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #adsFloBotPR.active {
+    margin-left: -372px;
+  }
 }
 
 @media screen and (max-width: 767px) {
-    .adsInHeaderPr {
-        display: none !important;
-    }
-    
+  .adsInHeaderPr {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #adsFloBotPR.active {
+    margin-left: -283px;
+  }
 }
 
 @media screen and (max-width: 599px) {
-    .adsHomeAfterMenuWr {
-        flex-direction: column;
-    }
-    .adsHAMLeft,
-    .adsHAMRight {
-        width: 100%;
-        align-items: center !important;
-    }
-    .globalFiveStars {
-        margin: 4px auto;
-    }
-    .globalHighlight {
-        text-align: center;
-    }
-    .adsHAMRight small {
-        width: 85%;
-        font-size: 90%;
-        text-align: center;
-        margin: 4px auto 8px auto;
-    }
-    .adsHAMRight a {
-        margin-top: 16px;
-        margin-bottom: 16px;
-    }
+  .adsHomeAfterMenuWr {
+    flex-direction: column;
+  }
+  .adsHAMLeft,
+  .adsHAMRight {
+    width: 100%;
+    align-items: center !important;
+  }
+  .globalFiveStars {
+    margin: 4px auto;
+  }
+  .globalHighlight {
+    text-align: center;
+  }
+  .adsHAMRight small {
+    width: 85%;
+    font-size: 90%;
+    text-align: center;
+    margin: 4px auto 8px auto;
+  }
+  .adsHAMRight a {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
 }
+
 @media screen and (max-width: 500px) {
-    .adsAfterContentWr {
-        flex-wrap: wrap;
-    }
-    .adsAfterContentCol {
-        flex: unset;
-        width: 672px;
-        max-width: 672px;
-        margin: 4px auto;
-    }
+  #adsFloBotPR.active {
+    margin-left: -233px;
+  }
+  .adsAfterContentWr {
+    flex-wrap: wrap;
+  }
+  .adsAfterContentCol {
+    flex: unset;
+    width: 672px;
+    max-width: 672px;
+    margin: 4px auto;
+  }
+}
+@media screen and (max-width: 479px) {
+  #adsFloBotPR.active {
+    display: none;
+    visibility: hidden;
+  }
 }
