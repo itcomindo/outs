@@ -29,9 +29,7 @@ function mnads_get_shortcode_ads_inline_in_aricle()
                $slotID = $slotID;
           }
 
-          $script = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-' . $clientID . '"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
+          $script = '<ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
      data-ad-format="fluid"
@@ -79,7 +77,6 @@ function add_ads_button()
                add_filter('mce_buttons', 'register_ads_button');
           }
      }
-     
 }
 add_action('admin_head', 'add_ads_button');
 

@@ -1,3 +1,6 @@
+#singlePr {
+  background-color: #fff;
+}
 .singleWr {
   width: 100%;
   display: flex;
@@ -9,7 +12,8 @@
   flex-direction: column;
   flex: 1;
   overflow: hidden;
-  background-color: antiquewhite;
+  background-color: #ffffff;
+  color: black;
 }
 .singleFeaturedImageWr,
 .globalPostFeaturedImage {
@@ -144,16 +148,14 @@
 }
 
 .inlineAdsPr {
-  min-width: 100%;
-  width: 664px;
+  width: 647px;
   max-width: 100%;
   overflow: hidden;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin: 4px auto;
   padding: 4px;
-  height: 98px;
-  max-height: 98px;
 }
+
+
 .inlineAdsWr {
   min-width: 100%;
   width: 100%;
@@ -236,7 +238,23 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .inlineAdsPr {
+    width: 756px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .inlineAdsPr {
+    width: 724px;
+  }
+}
+
 @media screen and (max-width: 600px) {
+  .inlineAdsPr {
+    width: calc(100% - 8px);
+    max-width: calc(100% - 8px);
+  }
   .singleFeaturedImageWr,
   .globalPostFeaturedImage {
     min-height: 200px;

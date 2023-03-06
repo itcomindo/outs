@@ -13,7 +13,10 @@ function mnads_show_ads_after_content()
                     $adsLeft = carbon_get_theme_option('ads_after_content_left_mn');
                     if (empty($adsLeft)) {
                     ?>
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<?php echo mnads_get_google_ca_pub(); ?>" crossorigin="anonymous"></script>
+                        <!--
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<?php // echo mnads_get_google_ca_pub(); 
+                                                                                                                    ?>" crossorigin="anonymous"></script>
+					-->
                         <!-- All Size Responsive -->
                         <ins class="adsbygoogle" style="display:block" data-ad-client="<?php echo mnads_get_google_ca_pub(); ?>" data-ad-slot="3029550843" data-ad-format="auto" data-full-width-responsive="true"></ins>
                         <script>
