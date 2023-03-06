@@ -28,5 +28,10 @@ include get_template_directory() . '/options/mnoption-auto-alt-title-img-on-post
 include get_template_directory() . '/options/mnoption-remove-website-field-in-comment-form-option.php';
 // associated post option
 include get_template_directory() . '/options/mnoption-enabling-associated-post-option.php';
+// ads multiplex option
+include get_template_directory() . '/options/mnoption-enabling-ads-multiplex-option.php';
+
+
+
 // seo options
 // include get_template_directory() . '/options/seo-option.php';

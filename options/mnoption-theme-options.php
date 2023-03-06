@@ -209,9 +209,6 @@ function mn_theme_options()
             Field::make('textarea', 'ads_footer_mn', 'Ads Footer')
                 ->set_help_text('masukan kode adsense untuk menampilkan di footer'),
 
-
-
-
             Field::make('separator', 'adsinseps', 'Ads In Content Shortcode')
                 ->set_classes('cbseperator')
                 ->set_help_text('Ads In Content Shortcode, klik untuk mengaktifkan setiap ads, cara pakai dengan cara mengetikan shortcode contoh: [ads] atau [ads2] dst. <span class="redbold">TIPS: pastikan untuk memasukan SLOT ID yang berbeda-beda untuk setiap ads untuk menampilkan ads yang berbeda. Dan pastikan juga Anda membuat ads dengan tipe in article ads (BUKAN DISPLAY, FEED)'),
