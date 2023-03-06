@@ -203,9 +203,20 @@ function mn_theme_options()
             Field::make('textarea', 'ads_footer_mn', 'Ads Footer')
                 ->set_help_text('masukan kode adsense untuk menampilkan di footer'),
 
+
+
+
+            Field::make('separator', 'adsinseps', 'Ads In Content Shortcode')
+                ->set_classes('sbSeperator')
+                ->set_help_text('Ads In Content Shortcode, klik untuk mengaktifkan setiap ads, cara pakai dengan cara mengetikan shortcode contoh: [ads] atau [ads2] dst. <span class="redbold">TIPS: pastikan untuk memasukan SLOT ID yang berbeda-beda untuk setiap ads untuk menampilkan ads yang berbeda. Dan pastikan juga Anda membuat ads dengan tipe in article ads (BUKAN DISPLAY, FEED)'),
+
             // ads inline article shortcode
             // checkbox enable disable ads inline article
-            Field::make('checkbox', 'enable_ads_inline_shortcode_in_article_option', 'Enable/Disable Ads Inline Article')
+
+
+            // Ads inline shortcode 1
+
+            Field::make('checkbox', 'enable_ads_inline_shortcode_in_article_option', 'Enable/Disable Ads Inline Article 1')
                 ->set_option_value('yes')
                 ->set_help_text('pilih untuk mengaktifkan ads inline article'),
 
@@ -220,6 +231,73 @@ function mn_theme_options()
                     ]
                 ]),
 
+            // Ads inline shortcode 2
+
+            Field::make('checkbox', 'enable_ads_inline_shortcode_in_article_option_2', 'Enable/Disable Ads Inline Article 2')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk mengaktifkan ads inline article'),
+
+            // ads slot id 2
+            Field::make('text', 'ads_slot_id_2_mn', 'Ads Slot ID')
+                ->set_help_text('<span class="redbold">NOTE: PASTIKAN SUDAH INPUT CODE ca-pub-727xxxxx</span> diatas terlebih dahulu sebelum memasukan ad-slot, isi ad-slot dibawah ketikan hanya angka misal: 3029550843, Cara menggunakannya cukup ketikan shortcode [ads] didalam artikel Anda.')
+                ->set_attribute('type', 'number')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'enable_ads_inline_shortcode_in_article_option_2',
+                        'value' => true,
+                    ]
+                ]),
+
+            // Ads inline shortcode 3
+
+            Field::make('checkbox', 'enable_ads_inline_shortcode_in_article_option_3', 'Enable/Disable Ads Inline Article 3')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk mengaktifkan ads inline article'),
+
+            // ads slot id 3
+            Field::make('text', 'ads_slot_id_3_mn', 'Ads Slot ID')
+                ->set_help_text('<span class="redbold">NOTE: PASTIKAN SUDAH INPUT CODE ca-pub-737xxxxx</span> diatas terlebih dahulu sebelum memasukan ad-slot, isi ad-slot dibawah ketikan hanya angka misal: 3039550843, Cara menggunakannya cukup ketikan shortcode [ads] didalam artikel Anda.')
+                ->set_attribute('type', 'number')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'enable_ads_inline_shortcode_in_article_option_3',
+                        'value' => true,
+                    ]
+                ]),
+
+            // Ads inline shortcode 4
+
+            Field::make('checkbox', 'enable_ads_inline_shortcode_in_article_option_4', 'Enable/Disable Ads Inline Article 4')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk mengaktifkan ads inline article'),
+
+            // ads slot id 4
+            Field::make('text', 'ads_slot_id_4_mn', 'Ads Slot ID')
+                ->set_help_text('<span class="redbold">NOTE: PASTIKAN SUDAH INPUT CODE ca-pub-747xxxxx</span> diatas terlebih dahulu sebelum memasukan ad-slot, isi ad-slot dibawah ketikan hanya angka misal: 4049550844, Cara menggunakannya cukup ketikan shortcode [ads] didalam artikel Anda.')
+                ->set_attribute('type', 'number')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'enable_ads_inline_shortcode_in_article_option_4',
+                        'value' => true,
+                    ]
+                ]),
+
+            // Ads inline shortcode 5
+
+            Field::make('checkbox', 'enable_ads_inline_shortcode_in_article_option_5', 'Enable/Disable Ads Inline Article 5')
+                ->set_option_value('yes')
+                ->set_help_text('pilih untuk mengaktifkan ads inline article'),
+
+            // ads slot id 5
+            Field::make('text', 'ads_slot_id_5_mn', 'Ads Slot ID')
+                ->set_help_text('<span class="redbold">NOTE: PASTIKAN SUDAH INPUT CODE ca-pub-757xxxxx</span> diatas terlebih dahulu sebelum memasukan ad-slot, isi ad-slot dibawah ketikan hanya angka misal: 505955085, Cara menggunakannya cukup ketikan shortcode [ads] didalam artikel Anda.')
+                ->set_attribute('type', 'number')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'enable_ads_inline_shortcode_in_article_option_5',
+                        'value' => true,
+                    ]
+                ]),
 
             // ads after content, there 2 columns left and right
             // checkbox enable disable ads after content
@@ -251,10 +329,18 @@ function mn_theme_options()
 
 
 
-
-
-
-
+            Field::make( 'separator', 'adsmultiplesep', 'Multiple Ads Show di Area Paling Bawah Post' ),
+            Field::make('checkbox', 'enable_ads_very_bottom_multiplex_ads','Aktifkan Multiplex Ads')
+            ->set_option_value( 'yes' ),
+            Field::make('text', 'ads_very_bottom_multiplex_ads_1','Ads Slot ID Multiple Ads')
+            ->set_help_text('PASTIKAN SUDAH INPUT CODE ca-pub-737xxxxx diatas terlebih dahulu sebelum memasukan ad-slot, isi ad-slot dibawah ketikan hanya angka misal: 3039550843, Cara menggunakannya cukup ketikan shortcode [ads] didalam artikel Anda.')
+            ->set_attribute('type', 'number')
+            ->set_conditional_logic([
+                [
+                    'field' => 'enable_ads_very_bottom_multiplex_ads',
+                    'value' => true,
+                ]
+            ]),
 
 
         ]);
