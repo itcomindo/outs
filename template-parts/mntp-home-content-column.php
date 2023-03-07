@@ -24,6 +24,7 @@ function mntp_show_home_content_column()
                     </aside>
                 </div>
                 <div class="homeContMid homeContCol">
+                    <?php // echo mnads_show_ads_multiplex_ads_home(); ?>
                     <?php echo home_query(); ?>
                     <?php echo mnqu_show_content_column_query(); ?>
                 </div>

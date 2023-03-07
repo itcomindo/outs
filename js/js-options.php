@@ -71,3 +71,13 @@ function load_admin_js() {
 add_action('admin_enqueue_scripts', 'load_admin_js');
 
 
+function load_banner_popup() {
+    $option = mnoption_enable_ads_popup_option();
+    if ($option) {
+        if (is_home() || is_single() || is_tag() || is_category()) {
+            wp_enqueue_script('popup-js', get_template_directory_uri() . '/js/popup.js', array('jq'), $version, true);
+            wp_enqueue_style('popup-css', get_template_directory_uri() . '/css/popup.css', array(), $version, 'all');
+        }
+    }
+}
+add_action('wp_enqueue_scripts', 'load_banner_popup', 3);

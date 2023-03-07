@@ -201,6 +201,7 @@ function mn_theme_options()
         ->add_fields([
             // google adsense code verification
             Field::make('text', 'google_adsense_code_verification_mn', 'Google Adsense CA Pub')
+                ->set_required(true)
                 ->set_help_text('masukan Google Adsense contoh: ca-pub-7273106919945417'),
             // ads header
             Field::make('textarea', 'ads_header_mn', 'Ads Header')
@@ -218,7 +219,6 @@ function mn_theme_options()
 
 
             // Ads inline shortcode 1
-
             Field::make('checkbox', 'enable_ads_inline_shortcode_in_article_option', 'Enable/Disable Ads Inline Article 1')
                 ->set_option_value('yes')
                 ->set_help_text('pilih untuk mengaktifkan ads inline article'),
@@ -235,7 +235,6 @@ function mn_theme_options()
                 ]),
 
             // Ads inline shortcode 2
-
             Field::make('checkbox', 'enable_ads_inline_shortcode_in_article_option_2', 'Enable/Disable Ads Inline Article 2')
                 ->set_option_value('yes')
                 ->set_help_text('pilih untuk mengaktifkan ads inline article'),
@@ -252,7 +251,6 @@ function mn_theme_options()
                 ]),
 
             // Ads inline shortcode 3
-
             Field::make('checkbox', 'enable_ads_inline_shortcode_in_article_option_3', 'Enable/Disable Ads Inline Article 3')
                 ->set_option_value('yes')
                 ->set_help_text('pilih untuk mengaktifkan ads inline article'),
@@ -269,7 +267,6 @@ function mn_theme_options()
                 ]),
 
             // Ads inline shortcode 4
-
             Field::make('checkbox', 'enable_ads_inline_shortcode_in_article_option_4', 'Enable/Disable Ads Inline Article 4')
                 ->set_option_value('yes')
                 ->set_help_text('pilih untuk mengaktifkan ads inline article'),
@@ -286,7 +283,6 @@ function mn_theme_options()
                 ]),
 
             // Ads inline shortcode 5
-
             Field::make('checkbox', 'enable_ads_inline_shortcode_in_article_option_5', 'Enable/Disable Ads Inline Article 5')
                 ->set_option_value('yes')
                 ->set_help_text('pilih untuk mengaktifkan ads inline article'),
@@ -302,13 +298,16 @@ function mn_theme_options()
                     ]
                 ]),
 
+            /**
+             * ! ADS After Conten Start
+             */
+
 
             Field::make('separator', 'adsaftercontentsep', 'Ads After Content')
                 ->set_classes('cbseperator')
                 ->set_help_text('Ads After Content adalah menampilkan kotak iklan yang tampil di satu row berisi dua kolom kiri dan kanan pada perangkan selain tablet dan diperangkat tablet - mobile 2 row dengan 1 kolom atas dan bawah.'),
 
-            // ads after content, there 2 columns left and right
-            // checkbox enable disable ads after content
+            // option
             Field::make('checkbox', 'enable_ads_after_content_option', 'Enable/Disable Google Adsense After Content')
                 ->set_option_value('yes')
                 ->set_help_text('pilih untuk mengaktifkan ads after content'),
@@ -335,14 +334,16 @@ function mn_theme_options()
                     ]
                 ]),
 
-
+            /**
+             * ! ADS MULTIPLEX START
+             */
 
             Field::make('separator', 'adsmultiplesep', 'Multiple Ads Show di Area Paling Bawah Post')
                 ->set_classes('cbseperator')
                 ->set_help_text('Multiple Ads Show di Area Paling Bawah Post adalah menampilkan kotak iklan yang tampil dengan layout grid jadi seakan-akan iklan adalah post dari website'),
 
-
-            Field::make('checkbox', 'enable_ads_very_bottom_multiplex_ads', 'Aktifkan Multiplex Ads')
+            // ads multiplex on single post
+            Field::make('checkbox', 'enable_ads_very_bottom_multiplex_ads', 'Aktifkan Multiplex Ads on Single Post')
                 ->set_option_value('yes'),
             Field::make('text', 'ads_very_bottom_multiplex_ads_1', 'Ads Slot ID Multiple Ads')
                 ->set_help_text('PASTIKAN SUDAH INPUT CODE ca-pub-737xxxxx diatas terlebih dahulu sebelum memasukan ad-slot, isi ad-slot dibawah ketikan hanya angka misal: 3039550843, Cara menggunakannya cukup ketikan shortcode [ads] didalam artikel Anda.')
@@ -353,6 +354,31 @@ function mn_theme_options()
                         'value' => true,
                     ]
                 ]),
+
+            // ads multiplex on homepage
+            Field::make('checkbox', 'enable_ads_very_bottom_multiplex_ads_homepage', 'Aktifkan Multiplex Ads on Homepage')
+                ->set_option_value('yes'),
+            Field::make('text', 'ads_very_bottom_multiplex_ads_homepage', 'Ads Slot ID Multiple Ads')
+                ->set_help_text('PASTIKAN SUDAH INPUT CODE ca-pub-737xxxxx diatas terlebih dahulu sebelum memasukan ad-slot, isi ad-slot dibawah ketikan hanya angka misal: 3039550843, Cara menggunakannya cukup ketikan shortcode [ads] didalam artikel Anda.')
+                ->set_attribute('type', 'number')
+                ->set_conditional_logic([
+                    [
+                        'field' => 'enable_ads_very_bottom_multiplex_ads_homepage',
+                        'value' => true,
+                    ]
+                ]),
+
+            /**
+             * !ADS FLOATING BOTTOM
+             */
+            Field::make('checkbox', 'ads_floating_bottom_option', 'Enble/Disable Ads Floating Bottom')
+                ->set_option_value('yes'),
+
+                /**
+                 * Ads Popup
+                 */
+            Field::make('checkbox', 'ads_popup_option', 'Enble/Disable Ads Popup')
+                ->set_option_value('yes'),
 
 
         ]);

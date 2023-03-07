@@ -31,6 +31,8 @@ include get_template_directory() . '/options/mnoption-enabling-associated-post-o
 // ads multiplex option
 include get_template_directory() . '/options/mnoption-enabling-ads-multiplex-option.php';
 
+include get_template_directory() . '/options/mnoption-ads-popup-option.php';
+
 
 
 // seo options

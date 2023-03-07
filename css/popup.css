@@ -1,0 +1,48 @@
+#popupPr {
+    width: 312px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    z-index: 9999;
+    animation: slideUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-animation: slideUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#popupClose {
+    position: absolute;
+    top: -26px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    color: white;
+    background-color: black;
+    z-index: 2;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+#popupWr {
+    width: 100%;
+}
+
+/* animation slideUp from top 60% to 50% */
+@keyframes slideUp {
+    0% {
+        top: 70%;
+    }
+    100% {
+        top: 50%;
+    }
+}

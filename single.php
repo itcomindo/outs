@@ -52,7 +52,7 @@ get_header();
                     </div>
                     <?php
                 } else {
-                    echo mnqu_show_global_query('category', 6, 'Related Post By Category');
+                    // ! create related post by author
                 }
                 ?>
                 <?php echo mnads_show_ads_after_content(); ?>

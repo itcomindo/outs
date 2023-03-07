@@ -3,13 +3,17 @@ defined('ABSPATH') || exit;
 
 function mnads_show_ads_floating_bottom()
 {
-
-    if (is_home() || is_single() && has_category('journal') || is_page() || is_category() || is_tag() && !has_category('journal')) {
-        echo '<div id="adsFloBotPR" class="active">';
-        echo '<div id="toggleCloseAdsFloBotPR" class="active"> Close</div>';
-        echo '<div id="toggleOpenAdsFloBotPR" class="inactive">Open</div>';
-        echo mnads_ads_floating_bottom_content();
-        echo '</div>';
+    $option = carbon_get_theme_option('ads_floating_bottom_option');
+    if ($option) {
+        if (is_home() || is_single() && has_category('journal') || is_page() || is_category() || is_tag() && !has_category('journal')) {
+            echo '<div id="adsFloBotPR" class="active">';
+            echo '<div id="toggleCloseAdsFloBotPR" class="active"> Close</div>';
+            echo '<div id="toggleOpenAdsFloBotPR" class="inactive">Open</div>';
+            echo mnads_ads_floating_bottom_content();
+            echo '</div>';
+        }
+    } else {
+        // do nothing
     }
 }
 add_action('wp_body_open', 'mnads_show_ads_floating_bottom');
@@ -39,7 +43,7 @@ function mnads_ads_floating_bottom_content()
 
         <img class="adsFloBotImgWr" width="50" height="50" src="<?php echo $userLogo; ?>" alt="<?php echo $namaPerusahaan; ?>" title="<?php echo $namaPerusahaan; ?>">
 
-        <small><?php echo $namaPerusahaan . ' ' .$description; ?></small>
+        <small><?php echo $namaPerusahaan . ' ' . $description; ?></small>
         <a class="adsFloLogoLink" title="<?php echo $namaPerusahaan; ?>" href="<?php echo $userWebsite; ?>" rel="noopener, nofollow" target="_blank">Visit Website</a>
     </div>
 <?php

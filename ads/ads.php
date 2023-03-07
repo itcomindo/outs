@@ -10,6 +10,7 @@ include get_template_directory() . '/ads/mnads-ads-inline-article-shortcode-3.ph
 include get_template_directory() . '/ads/mnads-ads-inline-article-shortcode-4.php';
 include get_template_directory() . '/ads/mnads-ads-inline-article-shortcode-5.php';
 include get_template_directory() . '/ads/mnads-ads-multiplex.php';
+include get_template_directory() . '/ads/mnads-ads-multiplex-home.php';
 
 
 
