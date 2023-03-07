@@ -266,6 +266,15 @@
 }
 
 /* Home Content Column */
+
+#adsHomeMultiplexWr {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  padding: 4px;
+}
+
+
 .homeContColWr {
   width: 100%;
   display: flex;
@@ -274,6 +283,7 @@
   padding-left: 4px;
   padding-right: 4px;
   overflow: hidden;
+  margin-top: 1em;
 }
 .homeContCol {
   padding: 1.5em 0;

@@ -24,6 +24,7 @@ function mnads_loader()
         include get_template_directory() . '/ads/mnads-ads-floating-bottom.php';
     } elseif (is_single() && !has_category('journal')) {
         include get_template_directory() . '/ads/mnads-ads-after-content.php';
+        include get_template_directory() . '/ads/mnads-ads-auto-inline-ads-in-single.php';
     } elseif (is_single() && has_category('journal')) {
         include get_template_directory() . '/ads/mnads-ads-after-content.php';
         include get_template_directory() . '/ads/mnads-ads-floating-bottom.php';

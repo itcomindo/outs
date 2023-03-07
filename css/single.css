@@ -15,6 +15,18 @@
   background-color: #ffffff;
   color: black;
 }
+
+/**
+ * Ads in content
+ */
+.adsAutoInContent {
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+
+
 .singleFeaturedImageWr,
 .globalPostFeaturedImage {
   width: 100%;
@@ -278,7 +290,8 @@
  * ADS MULTIPLEX
  */
 
-#adsMultiplexWr {
+#adsMultiplexWr,
+#adsMultiplexWr2 {
   margin: 2em auto;
 }
 

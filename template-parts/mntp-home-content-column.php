@@ -15,6 +15,7 @@ function mntp_show_home_content_column()
 ?>
     <div id="homeContPr" class="section globalSection">
         <div class="container">
+            <?php echo mnads_show_ads_multiplex_ads_home(); ?>
             <div class="homeContColWr">
                 <div class="homeContLeft homeContCol">
                     <aside class="homeAsideWr">

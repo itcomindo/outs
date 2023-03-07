@@ -9,16 +9,17 @@ function mnads_show_ads_multiplex_ads_home()
         if (!empty($adsContent)) {
             $clientID = mnads_get_google_ca_pub();
             $slotID = $adsContent;
-            echo '<div id="adsMultiplexWr" class="singleRelatedPostWr">
+            echo '<div id="adsHomeMultiplexWr">
             <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-format="autorelaxed"
-            data-ad-client="' . $clientID . '"
-            data-ad-slot="' . $slotID . '"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7273106919951725"
+     data-ad-slot="7901447225"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
             </div>';
         }
     }
 }
+
