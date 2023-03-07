@@ -40,3 +40,5 @@ function mntp_show_home_content_column()
     </div>
 <?php
 }
+
+

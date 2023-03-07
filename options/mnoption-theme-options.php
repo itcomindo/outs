@@ -176,9 +176,14 @@ function mn_theme_options()
     Container::make('theme_options', 'Homepage Options')
         ->set_page_parent($theme_options)
         ->add_fields([
+            // jumlah post di conten column
+            Field::make('text', 'the_post_number_in_post_mid_column', 'Jumlah Post didalam Kolom Tengah')
+                ->set_help_text('masukan jumlah post yang akan ditampilkan didalam kolom tengah')
+                ->set_default_value(5)
+                ->set_attribute('type', 'number'),
             // checkbox aktifkan infinite scroll option
             Field::make('checkbox', 'enable_disable_infinite_scroll_mn', 'Enable/Disable Infinite Scroll')
-                ->set_help_text('pilih untuk mengaktifkan infinite scroll'),
+                ->set_help_text('pilih untuk mengaktifkan infinite scroll di homepage pada kolom tengah'),
         ]);
     // PAGE OPTIONS
     Container::make('theme_options', 'Page Options')
@@ -194,11 +199,11 @@ function mn_theme_options()
     Container::make('theme_options', 'Author Options')
         ->set_page_parent($theme_options)
         ->add_fields([]);
-
-    // ADS OPTIONS
-    Container::make('theme_options', 'Ads Options')
+    //GOOGLE ADSENSE OPTIONS
+    Container::make('theme_options', 'Google Adsense Options')
         ->set_page_parent($theme_options)
         ->add_fields([
+
             // google adsense code verification
             Field::make('text', 'google_adsense_code_verification_mn', 'Google Adsense CA Pub')
                 ->set_required(true)
@@ -368,15 +373,22 @@ function mn_theme_options()
                     ]
                 ]),
 
+        ]);
+    // ADS OPTIONS
+    Container::make('theme_options', 'Ads Options')
+        ->set_page_parent($theme_options)
+        ->add_fields([
+
+
             /**
              * !ADS FLOATING BOTTOM
              */
             Field::make('checkbox', 'ads_floating_bottom_option', 'Enble/Disable Ads Floating Bottom')
                 ->set_option_value('yes'),
 
-                /**
-                 * Ads Popup
-                 */
+            /**
+             * Ads Popup
+             */
             Field::make('checkbox', 'ads_popup_option', 'Enble/Disable Ads Popup')
                 ->set_option_value('yes'),
 

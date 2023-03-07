@@ -26,15 +26,22 @@ function mnqu_show_content_column_query()
             echo 'No posts found';
         }
         // get the rest of the posts
+        $postPerPageOption = carbon_get_theme_option('the_post_number_in_post_mid_column');
+        $infiniteScrollOption = carbon_get_theme_option('enable_disable_infinite_scroll_mn');
+        if ($infiniteScrollOption == true) {
+            $postPerPageOption = -1;
+        } else {
+            $postPerPageOption = $postPerPageOption;
+        }
+
         $args = array(
             'post_type' => 'post',
-            'posts_per_page' => 5,
+            'posts_per_page' => $postPerPageOption,
             'post_status' => 'publish',
             'orderby' => 'date',
             'order' => 'DESC',
             'post__not_in' => $postIDs,
             'category_name' => 'journal',
-            // paged
             'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
         );
         $query = new WP_Query($args);

@@ -29,21 +29,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             adsHomeAfterMenuWr.slideDown();
         });
 
-        // infinite scroll iniitialize
-
-        jQuery('.homeContColPostsWr').infiniteScroll({
-                // options
-                path: '.globalPaged a.next',
-                append: '.homeContColPostItem',
-                history: true,
-            });
-            
-
-
-
-
-
-
 
     });
 });

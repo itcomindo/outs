@@ -34,6 +34,5 @@ include get_template_directory() . '/options/mnoption-enabling-ads-multiplex-opt
 include get_template_directory() . '/options/mnoption-ads-popup-option.php';
 
 
-
 // seo options
 // include get_template_directory() . '/options/seo-option.php';
